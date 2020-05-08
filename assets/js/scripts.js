@@ -1,21 +1,21 @@
-$('.project1Button').on('click', function(){
-    // var overlay = $("<div class='overlay'></div>").text("");  // Create text with jQuery
+// const LETTER_DELAY = 100;
 
-    // var overlayjQuery = $( "p" ).add( "div" ).addClass("overlay");
+// const lines = [
+//     'Hello my name is Sam Catley',
+//     'My projects are below...'
+// ];
 
-    $("body").append("<div class='overlay'></div>");
-    $(".overlay").css({
-        "backgroundColor": "rgb(10, 10, 10)",
-        "position": "fixed",
-        "top": "0",
-        "height": "100vh",
-        "width": "100vw",
-        "opacity": "0.8",
-    })
-    // var project1Card = $("<div class='overlay'></div>").text("");
-})
+// const typeLetter = (letter) => $('.typewriter .content').append(letter);
 
-$('.overlay').on('click', function() {
-    console.log('clicked!')
-    $(this).remove();
-})
+// const typeLine = (line) => {
+//     return new Promise((resolve, reject) => {
+//         line.split('').forEach((letter, index) => {
+//             setTimeout(() => typeLetter(letter), LETTER_DELAY * index);
+//             if (index === line.length - 1) {
+//                 resolve();
+//             }
+//         });
+//     });
+// }
+
+// lines.forEach((line) => typeLine(line));

@@ -3,103 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS V4.4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS Stylesheet -->
     <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
-    <title>My Portfolio</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/58beb8f9e8.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+    <title>IAmSamTC's Portfolio</title>
 </head>
 <body>
-    <div id="landingHeader" class="text-center pt-5">
-        <!-- Landing Header will be the front page that greets users, full screen -->
-        <!-- Below will be using the typewriter effect, displaying each line at a time and looping -->
-        <h1>Hello my name is Sam Catley</h1>
-        <h1>My projects are below...</h1>
-        <h1>Press M for Menu</h1>
-        <p class="change">
-          Background should be of a terminal full screen. <br>
-          This test should be in the center of the screen - remove once done.
-        </p>
-        <!-- Above will be using the typewriter effect, displaying each line at a time and looping -->
-    </div>
-    <div class="container">
-        <h2 class="text-center pt-5">List Projects below</h2>
-        <p class="text-center">Note: The below projects have been built following a tutorial though some differ from original</p>
-        <p class="change">Display projects via Cards in Bootstrap - remove once done</p>
-        <!-- Projects list here -->
-        <!-- Row 1 -->
-        <div class="row">
-            <div class="col-sm-4 pb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Project 1</h5>
-                  <p class="card-text">Brief summary of Project 1 Lorem ipsum dolor sit amet.</p>
-                  <a href="#" class="btn btn-primary project1Button">Check it out!</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 pb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Project 2</h5>
-                  <p class="card-text">Brief summary of Project 2 Lorem ipsum dolor sit amet.</p>
-                  <a href="#" class="btn btn-primary project2Button">Check it out!</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 pb-2">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 3</h5>
-                    <p class="card-text">Brief summary of Project 3 Lorem ipsum dolor sit amet.</p>
-                    <a href="#" class="btn btn-primary project3Button">Check it out!</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!-- Row 2 -->
-          <div class="row">
-            <div class="col-sm-4 pb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Project 4</h5>
-                  <p class="card-text">Brief summary of Project 1 Lorem ipsum dolor sit amet.</p>
-                  <a href="#" class="btn btn-primary project4Button">Check it out!</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 pb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Project 5</h5>
-                  <p class="card-text">Brief summary of Project 2 Lorem ipsum dolor sit amet.</p>
-                  <a href="#" class="btn btn-primary project5Button">Check it out!</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 pb-2">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 6</h5>
-                    <p class="card-text">Brief summary of Project 3 Lorem ipsum dolor sit amet.</p>
-                    <a href="#" class="btn btn-primary project6Button">Check it out!</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-          
-          
-
-    </div>
-    <div class="testDiv"></div>
-    <!-- <div class="overlay"></div> -->
-    <!-- <div class="card project1Overlay" style="width: 35rem;">
-        <img src="assets/img/lizard.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Project 1</h5>
-          <p class="change">Card should be center on the whole page, pref with Bootstrap, not with CSS and relative with content</p>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deleniti neque cum harum voluptatem soluta facere, officia maxime dolor excepturi, officiis repudiandae amet possimus. Assumenda aperiam veniam cum fugit, vitae nihil blanditiis, neque maxime autem consequuntur quis. Tempora blanditiis ipsam nam nesciunt? Debitis dolor quae quas rem hic necessitatibus enim!.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <div id="landingHeader" class="text-center">
+      <div id="backgroundImage"></div>
+      
+      <div id="headerText">
+        <h1 class="display-2">Hey, my name is Sam Catley!</h1>
+        <h1>Please see my projects below</h1>
+      </div>
+      <!-- <div class="typewriter">
+        <div class="content"></div>
+        <div class="cursor"></div>
       </div> -->
+    </div>
+    <div class="container pt-5">
+        <!-- Summary with a collapsable box -->
+        <div class="col-12 pb-4">
+          <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Click to see a summary of me
+          </button>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <h5>Short and Sweet</h3>
+              <p>Hi! Currently I'm in IT Support however I wish to transition to the Web Development industry, I want to be creative with my work, display beautiful graphics, implement incredible animations, simple transitions and much more and looking for an opportunity to do this.</p>
+              <h5>What are my interests?</h5>
+              <p>Learning, drawing, music and games.
+                <ul>
+                  <li>
+                    I've always been a creative drawer since I was a child, this has allowed me to have an appreciation for artwork, which includes any type of graphic.
+                  </li>
+                  <li>
+                    During my teenage years I went through a music experience, like many teenagers, had one earphone in pretty much all the time, I am interested in a wide variety of music from Classical to Trance to Heavy Rock and everything inbetween.
+                  </li>
+                  <li>
+                    Again, during my teenage years I was a huge gamer, I've played anything from 2D arcade games such as "Cube Runner" to fully intensive games such as "Ark Survival Envolved". However, when I entered around my mid 20's I realised that these games were taking up too much of my time, so I decided to make the big step to stop 'gaming', however a few years later, I came up with an idea, with my huge knowledge of games, why not use it to make other games, so that's what I'm doing in the background, when I finalise a game I'll display it on my portfolio.
+                  </li>
+                </ul>
+                
+              </p>
+              <h5>How did I start this journey?</h5>
+              <p>I've always been interested in coding from a young age however I've never known where to start, it wasn't until the Cryptocurrency hype that it rekindled the embers of my enthusiasm. I started to learn Solidity (Ethereum's smart contract language), but in order to use it effectively I needed to learn the basics, HTML, JS and CSS so I could display, collect and collate information for the smart contract and it was then that my journey started. During this time, I rediscovered my passion for art and music, it was when I started to incorporate this passion into coding and development which exponentially fanned the flames on my enthusiasm which is burning brightly.</p>
+            </div>
+          </div>
+        </div>
+        <!-- End of summary with collapsable box -->
+        <h2 class="text-center title">My Projects</h2>
+        <!-- Projects -->
+        <h5 class="text-center">I built this one myself <i class="fas fa-smile-beam"></i> </h5>
+        <!-- Row 1 my-projects -->
+        <div class="row text-center">
+          <!-- project 0 -->
+          <div class="col-sm-4 pb-2 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Inverted Wings</h5>
+                <p class="card-text">Music Visualiser</p>
+                <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject0">Check it out!</button>
+              </div>
+            </div>
+          </div>
+          <!-- end of project 0 -->
+          <!-- modal 0 -->
+          <div class="modal fade" id="modalProject0" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modelTitleProject0">Inverted Wings</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  
+                  <img class="img-fluid w70" alt="Responsive image" src="assets/img/invertedWings.png">
+                  <div>
+                    <span class="badge badge-info">P5.js</span>
+                  </div>
+                  Inverted Wings use lines grounded on a pulsing circle. Bass circles will omit once volume exceeds certain amount. Made with P5.js.
+                </div>
+                <div class="modal-footer">
+                  <a href="https://codepen.io/Catley94/full/JjoyLPQ" class="btn btn-outline-primary" role="button" aria-pressed="true">CodePen</a>
+                  <a href="https://github.com/Catley94/musicVisualizer" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of modal 0 -->
+        </div>
+        <!-- end of my-projects -->
+        <!-- Row 1 help-projects-->
+        <p class="text-center">Note: The below projects have been built following a tutorial though some differ from original</p>
+        <div class="row">
+          
+          <!-- project 1 -->
+            <div class="col-sm-4 pb-2 text-center">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Flex Panels</h5>
+                  <p class="card-text">Panels that open when clicked</p>
+                  <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject1">Check it out!</button>
+                </div>
+              </div>
+            </div>
+            <!-- end of project 1 -->
+            <!-- modal 1 -->
+            <div class="modal fade" id="modalProject1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleProject1">Project 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    This project I did when doing the JavaScript30 challenge with WesBos, he shows you how to create 5 'panels' that 'flex' when clicked, using bezier curves making the panels expand out and then retract before settling. By default it displays "Let's take it all in", but when clicking on individual panels it displays messages specific to the panel.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://catley94.github.io/Flex-Panels/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/Flex-Panels" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 1 -->
+            <!-- project 2 -->
+            <div class="col-sm-4 pb-2 text-center">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jumper</h5>
+                  <p class="card-text">Inspriation of Impossible game</p>
+                  <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject2">Check it out!</button>
+                </div>
+              </div>
+            </div>
+            <!-- end of project 2 -->
+            <!-- modal 2 -->
+            <div class="modal fade" id="modalProject2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleProject2">Project 2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div>
+                      <span class="badge badge-info">Phaser</span>
+                    </div>
+                    <span class="badge badge-primary">Inprogress</span>This game has been buit with the impossible game in mind, however this is still in progress.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://catley94.github.io/Jumper/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/Jumper" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 2 -->
+            <!-- project 3 -->
+            <div class="col-sm-4 pb-2 text-center">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Particles</h5>
+                    <p class="card-text">Particles on canvas</p>
+                    <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject3">Check it out!</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end of project 3 -->
+          <!-- modal 3 -->
+          <div class="modal fade" id="modalProject3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modelTitleProject3">Particles</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img class="img-fluid" alt="Responsive image" src="assets/img/Particles.png">
+                  Particles moving in random directions with a variation of 3 colours, when hovered over, a radius around the mouse will 'grow', when they leave the radius they shrink back to their original size.
+                </div>
+                <div class="modal-footer">
+                    <a href="https://catley94.github.io/particles/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/particles" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of modal 3 -->
+          <!-- Row 2 -->
+          <div class="row pb-5">
+            <!-- project 4 -->
+            <div class="col-sm-4 pb-2 text-center">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">JavaScript Drum Kit</h5>
+                  <p class="card-text">Make music by just by pressing keys</p>
+                  <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject4">Check it out!</button>
+                </div>
+              </div>
+            </div>
+            <!-- end of project 4 -->
+            <!-- modal 4 -->
+            <div class="modal fade" id="modalProject4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleProject4">Project 4</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" alt="Responsive image" src="assets/img/drumkit.png">
+                    Drumkit made with JS, 9 keys that trigger sounds when pressed and a border around it indicating which key was pressed.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://catley94.github.io/JavaScript-Drum-Kit/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/JavaScript-Drum-Kit" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 4 -->
+            <!-- project 5 -->
+            <div class="col-sm-4 pb-2 text-center">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Simple Budget App</h5>
+                  <p class="card-text">Takes a budget amount and takes multiple expenses.</p>
+                  <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject5">Check it out!</button>
+                </div>
+              </div>
+            </div>
+            <!-- end of project 5 -->
+            <!-- modal 5 -->
+            <div class="modal fade" id="modalProject5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleProject5">Project 5</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" alt="Responsive image" src="assets/img/budget.png">
+                    Takes a budget amount, takes multiple expenses, minuses from the budget amount to get what is left over. Can also edit existing list of expenses by changing values or deleting.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://catley94.github.io/BudgetProject/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/BudgetProject" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 5 -->
+            <!-- project 6 -->
+            <div class="col-sm-4 pb-2 text-center">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">JavaScript Clock</h5>
+                    <p class="card-text">Clock made with JS</p>
+                    <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalProject6">Check it out!</button>
+                  </div>
+                </div>
+              </div>
+              <!-- end of project 6 -->
+              <!-- modal 6 -->
+            <div class="modal fade" id="modalProject6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitleProject6">Project 6</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" alt="Responsive image" src="assets/img/clock.png">
+                    Clock made with JS, still improving. Could be a nice home page for your browser.
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://catley94.github.io/JavaScript-Clock/" class="btn btn-outline-primary" role="button" aria-pressed="true">Demo</a>
+                    <a href="https://github.com/Catley94/JavaScript-Clock" class="btn btn-outline-primary" role="button" aria-pressed="true">Github</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modal 6 -->
+          </div>
+          <!-- end of projects -->
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="container-fluid">
+        <div class="row pt-3">
+          <div class="col-12">
+            <h4 class="text-center">Say <i class="fas fa-thumbs-up"></i>, by sending me an email: <a class="email" href="mailto:s.catley@live.co.uk">s.catley@live.co.uk</a></h4>
+          </div>
+        </div>
+        <div class="row pb-3 text-center">
+          <div class="col-sm-6">
+            <h5>Other Websites:</h5> 
+          </div>
+          <div class="col-sm-6">
+            <a type="button" class="btn btn-success" href="https://goudhurstexplorers.com">Goudhurst Explorers</a>
+            <a type="button" class="btn btn-warning" href="https://catley94.github.io/js-libs-frameworks/">JS Libraries and Frameworks</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
