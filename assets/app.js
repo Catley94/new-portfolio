@@ -98,6 +98,8 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     _dandelion.ySpeed = 0;
     _dandelion.originalXPos = xPos;
     _dandelion.originalYPos = yPos;
+    _dandelion.x = _dandelion.originalXPos;
+    _dandelion.y = _dandelion.originalYPos;
     AddToContainer(dandelionContainer, _dandelion);
     AddToDandelionsArray(_dandelion);
     console.log(_dandelion.originalXPos)
