@@ -9,14 +9,37 @@ let dandelions = [];
 let preDandelionSeed = [];
 const maxWindSpeed = 3;
 const floatingSpeed = 0.01;
-const maxDandelions = 3;
+
+
+const projects = [
+    {
+        Title: "Inverted Wings",
+        ShortDesc: "Music Visualiser",
+        Thumbnail: "",
+        LibrariesUsed: "P5.JS",
+        LongDesc: "Inverted Wings use lines grounded on a pulsing circle. Bass circles will omit once volume exceeds certain amount. Made with P5.js."
+    },
+    {
+        Title: "Text adventure template",
+        ShortDesc: "Template for creating text adventure games",
+        Thumbnail: "",
+        LibrariesUsed: "P5.JS",
+        LongDesc: "Text adventure template is exactly that, a template that allows others to edit and create their own two option text adventure game. This was originally created for covid lockdown for creativity, it's made for simplicity, everything is dynamic, all you need to do is add the state onto the storyBook object and the rest will happen like magic!"
+    }
+]
+
+const maxDandelions = projects.length;
+
+
 
 /*
     TODO
-    Remove Global Wind Speed
     Each dandelion to have different speeds based on size (bigger is slower)
-    Dandelions to spawn off screen left hand side, move right and despawn when off screen
-    Dandelions also float up and down, when completely off screen, despawn
+    Dandelions to spread themselves out when moving on screen, 5 seconds apart or so
+    Dandelions to spawn off screen left hand side
+    Dandelions to move right until off screen
+    When completely off screen, move to left side of screen
+    Dandelions also float up and down
 */
 
 // Initialise Functions
@@ -32,7 +55,7 @@ function SetupLoader() {
     loader.add('dandelionSeed', 'img/dandelionSeed.png');
     loader.load((loader, resources) => {
         background = new PIXI.Sprite(resources.backgroundImage.texture);
-        for(let i = 0; i < 3; i++) {
+        for(let i = 0; i < maxDandelions; i++) {
             const localDandelionSeed = new PIXI.Sprite(resources.dandelionSeed.texture);
             preDandelionSeed.push(localDandelionSeed);
         }
@@ -85,15 +108,6 @@ let elapsed = 0.0;
 
 
 app.ticker.add((delta) => {
-
-    if(dandelions.length < maxDandelions) {
-        if(dandelionSeed) {
-
-            // const localSprite = new PIXI.Sprite(dandelionSeed);
-            // SpawnDandelion(localSprite, 50, 50);
-        }
-
-    }
 
     if(dandelions) {
         dandelions.forEach((dandelion) => {
