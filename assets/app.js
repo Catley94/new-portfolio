@@ -30,8 +30,6 @@ const projects = [
 
 const maxDandelions = projects.length;
 
-
-
 /*
     TODO
     Each dandelion to have different speeds based on size (bigger is slower)
@@ -40,14 +38,14 @@ const maxDandelions = projects.length;
     Dandelions to move right until off screen
     When completely off screen, move to left side of screen
     Dandelions also float up and down
+    Create GUI for displaying projects
+    Stop dandelion when hovering over and display GUI
 */
 
 // Initialise Functions
 AddStageToHTML();
 AddContainerToStage(backgroundContainer);
 AddContainerToStage(dandelionContainer);
-
-
 
 function SetupLoader() {
     const loader = new PIXI.Loader();
@@ -64,10 +62,8 @@ function SetupLoader() {
     loader.onComplete.add(() => {
         let x = 0;
         let y = 0;
-        console.log("Completed!");
         SetUpBackground(background);
         preDandelionSeed.forEach((seed) => {
-            console.log(seed)
             SpawnDandelion(seed, x, y);
             x += 50;
             y += 50;
@@ -102,12 +98,7 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     _dandelion.y = _dandelion.originalYPos;
     AddToContainer(dandelionContainer, _dandelion);
     AddToDandelionsArray(_dandelion);
-    console.log(_dandelion.originalXPos)
 }
-
-// Add a ticker callback to scroll the text up and down
-let elapsed = 0.0;
-
 
 app.ticker.add((delta) => {
 
