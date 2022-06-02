@@ -4,6 +4,10 @@ function SetupPixiStage() {
     return new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
 }
 
+function SetupPixiStageRenderer() {
+    return new PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, { antialias: true });
+}
+
 function AddContainerToStage(container) {
     app.stage.addChild(container);
 }
