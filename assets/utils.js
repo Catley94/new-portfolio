@@ -1,4 +1,4 @@
-let scale = window.innerHeight / window.innerWidth;
+let scale = (window.innerHeight / window.innerWidth) * 0.5;
 
 function SetupPixiStage() {
     return new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
@@ -46,7 +46,6 @@ const decrementSpeed = (item, _amount) => {
 
 function CheckDandelionSpeed(dandelion) {
     if (dandelion.xSpeed === 0) {
-        // const windSpeed = GenerateRandomWindSpeed();
         const windSpeed = GenerateRandomWindSpeed();
         AssignWindSpeed(dandelion, windSpeed);
     }
@@ -68,15 +67,13 @@ function MoveDandelion(dandelion) {
     StartFloating(dandelion);
 }
 
-function GenerateRandomWindSpeed() {
-    return Math.floor(Math.random() * maxWindSpeed);
+function GenerateRandomNumber(max) {
+    return Math.floor(Math.random() * max);
 }
 
-function CheckIfExceedsBounds(dandelion) {
-    if (dandelion.x + dandelion.width >= window.innerWidth || dandelion.x < 0) {
-        dandelion.speed = -dandelion.speed;
-    }
-    if (dandelion.y + dandelion.height >= window.innerHeight || dandelion.y < 0) {
-        dandelion.speed = -dandelion.speed;
-    }
+function GenerateRandomWindSpeed() {
+    return GenerateRandomNumber(maxWindSpeed);
 }
+
+
+

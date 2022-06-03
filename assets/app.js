@@ -3,12 +3,13 @@ let app = SetupPixiStage();
 let backgroundContainer = new PIXI.Container();
 let dandelionContainer = new PIXI.Container();
 let background;
-let rawDandelionSeed;
 let dandelionSeed;
 let dandelions = [];
 let preDandelionSeed = [];
 const maxWindSpeed = 3;
 const floatingSpeed = 0.01;
+const maxDandelionXPosSpawn = -500;
+const maxDandelionYPosSpawn = window.innerHeight;
 
 
 const projects = [
@@ -33,9 +34,6 @@ const maxDandelions = projects.length;
 /*
     TODO
     Each dandelion to have different speeds based on size (bigger is slower)
-    Dandelions to spread themselves out when moving on screen, 5 seconds apart or so
-    Dandelions to spawn off screen left hand side
-    Dandelions to move right until off screen
     When completely off screen, move to left side of screen
     Dandelions also float up and down
     Create GUI for displaying projects
@@ -60,16 +58,19 @@ function SetupLoader() {
     })
 
     loader.onComplete.add(() => {
-        let x = 0;
+        let x = -200;
         let y = 0;
         SetUpBackground(background);
         preDandelionSeed.forEach((seed) => {
-            SpawnDandelion(seed, x, y);
-            x += 50;
-            y += 50;
-        })
-        // SpawnDandelion(dandelionSeed, 0, 0);
+            setInterval(() => {
 
+            }, 500)
+            SpawnDandelion(seed, x, y);
+            const randomX = GenerateRandomNumber(maxDandelionXPosSpawn);
+            const randomY = GenerateRandomNumber(maxDandelionYPosSpawn - seed.height);
+            x += randomX;
+            y += randomY;
+        })
     })
 }
 
@@ -96,8 +97,29 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     _dandelion.originalYPos = yPos;
     _dandelion.x = _dandelion.originalXPos;
     _dandelion.y = _dandelion.originalYPos;
+    _dandelion.userHovering = false;
+    _dandelion.interactive = true;
+    _dandelion.on("pointerover", () => {
+        _dandelion.userHovering = true;
+        //TODO Add filter colour when read, so user knows they have already read this project
+        //TODO Add GUI to appear when hovering
+    })
+    _dandelion.on("pointerout", () => {_dandelion.userHovering = false;})
+    _dandelion.buttonMode = true;
     AddToContainer(dandelionContainer, _dandelion);
     AddToDandelionsArray(_dandelion);
+}
+
+function CheckIfExceedsBounds(dandelion) {
+    // Two dandelion's width worth off screen, move Dandelion to left side of screen.
+    if (dandelion.x - dandelion.width >= window.innerWidth) {
+        // TODO Move dandelion to left side of screen;
+        dandelion.x = GenerateRandomNumber(maxDandelionXPosSpawn);
+        console.log("Resetting XPOS")
+    }
+    if (dandelion.y + dandelion.height >= window.innerHeight || dandelion.y < 0 && dandelion.x + dandelion.with >= window.innerWidth) {
+        // TODO Move dandelion to left side of screen;
+    }
 }
 
 app.ticker.add((delta) => {
@@ -106,7 +128,7 @@ app.ticker.add((delta) => {
         dandelions.forEach((dandelion) => {
             CheckDandelionSpeed(dandelion);
             CheckIfExceedsBounds(dandelion);
-            MoveDandelion(dandelion);
+            !dandelion.userHovering ? MoveDandelion(dandelion) : null;
         })
     }
 
