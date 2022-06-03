@@ -144,7 +144,6 @@ app.ticker.add((delta) => {
                 CheckDandelionSpeed(dandelion);
                 CheckIfExceedsBounds(dandelion);
                 MoveDandelion(dandelion);
-                console.log(dandelion.ySpeed);
             }
 
         })
