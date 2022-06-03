@@ -104,6 +104,15 @@ function CheckIfExceedsBounds(dandelion) {
     }
 }
 
+function Blur(_dandelion, amount) {
+    _dandelion.filters = [blurFilter1];
+    blurFilter1.blur = amount;
+}
+
+function Fade(_dandelion, amount) {
+    _dandelion.alpha = amount;
+}
+
 const CloseGUI = () => {
     //TODO Add fade out through CSS or JQuery
     projectView.classList.remove("show");

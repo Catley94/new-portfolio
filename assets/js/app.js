@@ -11,6 +11,8 @@ const floatingSpeed = 0.01;
 const maxDandelionXPosSpawn = -500;
 const maxDandelionYPosSpawn = window.innerHeight;
 
+const blurFilter1 = new PIXI.filters.BlurFilter();
+
 
 const projects = [
     {
@@ -34,7 +36,6 @@ const maxDandelions = projects.length;
 /*
     TODO
     Each dandelion to have different speeds based on size (bigger is slower)
-    BUG: When hovering over the dandelion for some time, dandelion increase YSpeed dramtically
     Add Thumbnail images
 */
 
@@ -86,11 +87,13 @@ function AddToDandelionsArray(_image) {
     dandelions.push(_image);
 }
 
+
+
+
 function SpawnDandelion(_dandelion, xPos, yPos) {
     //Private functions
     function _AssignProject(item) {
         item.project = projects[item.id];
-        console.log(item.project);
     }
     _dandelion.id = dandelions.length;
     _dandelion.scale.x = scale;
@@ -104,6 +107,7 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     _dandelion.read = false;
     _dandelion.userHovering = false;
     _dandelion.interactive = true;
+
     _AssignProject(_dandelion);
 
     _dandelion.on("pointerover", () => {
@@ -112,12 +116,12 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
 
     _dandelion.on("pointerdown", () => {
         _dandelion.read = true;
-        console.log("dandelion read: ", _dandelion.id);
+        Fade(_dandelion, 0.5);
+        Blur(_dandelion, 3);
         PopulateGUI(_dandelion);
         OpenGUI();
         _dandelion.userHovering = false;
-        //TODO Add filter colour when read, so user knows they have already read this project OR add transparency
-        //TODO Add GUI to appear when hovering
+
     })
 
     _dandelion.on("pointerout", () => {
@@ -136,9 +140,13 @@ app.ticker.add((delta) => {
     CheckIfGuiOpen();
     if(dandelions) {
         dandelions.forEach((dandelion) => {
-            CheckDandelionSpeed(dandelion);
-            CheckIfExceedsBounds(dandelion);
-            !dandelion.userHovering ? MoveDandelion(dandelion) : null;
+            if(!dandelion.userHovering) {
+                CheckDandelionSpeed(dandelion);
+                CheckIfExceedsBounds(dandelion);
+                MoveDandelion(dandelion);
+                console.log(dandelion.ySpeed);
+            }
+
         })
     }
 });
