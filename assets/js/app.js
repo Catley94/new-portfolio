@@ -35,8 +35,9 @@ const maxDandelions = projects.length;
 
 /*
     TODO
+    BUG: Fix scaling of images
     Each dandelion to have different speeds based on size (bigger is slower)
-    Add Thumbnail images
+    Add Thumbnail images for projects
 */
 
 // Initialise Functions
