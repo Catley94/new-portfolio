@@ -67,8 +67,91 @@ const projects = [
                 With this app, you can create as many sets (which include as many exercises as you want within each set) as you like, you have the option of counting in either seconds or minutes (for the ease of saying 10 seconds vs 60 seconds) and when you start the countdown, gives a nice big timer with text to say how long you have left of this exercise, what exercise you are currently doing, what set you are currently on, and what is the total time left of all the set and exercises.<br/>
                 Though this app was inteded for exercise, you could use this in multiple situations, as it is quite simply, an advanced timer application. <br/>
                 Through personal use, I have found improvements that need to be made, such as adding a sound when the exercise changes (in this example, I was running and didn't notice visually that the exercise had changed to walk, and vice versa, without keeping a hawk eye on the app at all times), therefore this app is still a work-in-progress however is at the point of being Version 1.
-I do have a standalone .apk which I have made within Android Studio (using the ionic API capacitor), so can pass this on through email or shared link, it is my hope in the near future I may publish this on Google Play so others can enjoy the benefit this app can bring. <br/> 
+I do have a standalone .apk which I have made within Android Studio (using the ionic API capacitor), so can pass this on through email or shared link, it is my hope in the near future I may publish this on Google Play so others can enjoy the benefit this app can bring. <br/>
             </p>
+        `,
+        showOff: true
+    },
+    {
+        title: "Flex Panels",
+        shortDesc: "Panels that open when clicked",
+        thumbnail: "",
+        librariesUsed: "JavaScript",
+        longDesc: `
+            <p>
+                 This project I did when doing the JavaScript30 challenge with WesBos, he shows you how to create 5 'panels' that 'flex' when clicked, using bezier curves making the panels expand out and then retract before settling. By default it displays "Let's take it all in", but when clicking on individual panels it displays messages specific to the panel.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "Jumper",
+        shortDesc: "Inspriation of Impossible game",
+        thumbnail: "",
+        librariesUsed: "PhaserJS",
+        longDesc: `
+            <p>
+                This game has been buit with the impossible game in mind, however this is still in progress.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "Particles",
+        shortDesc: "Particles on canvas",
+        thumbnail: "img/Particles.png",
+        librariesUsed: "JavaScript",
+        longDesc: `
+            <p>
+                Particles moving in random directions with a variation of 3 colours, when hovered over, a radius around the mouse will 'grow', when they leave the radius they shrink back to their original size.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "JavaScript Drum Kit",
+        shortDesc: "Make music by just by pressing keys",
+        thumbnail: "img/drumkit.png",
+        librariesUsed: "JavaScript",
+        longDesc: `
+            <p>
+                Drumkit made with JS, 9 keys that trigger sounds when pressed and a border around it indicating which key was pressed.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "Simple Budget App",
+        shortDesc: "Takes a budget amount and takes multiple expenses.",
+        thumbnail: "img/budget.png",
+        librariesUsed: "JavaScript",
+        longDesc: `
+            <p>
+                Takes a budget amount, takes multiple expenses, minuses from the budget amount to get what is left over. Can also edit existing list of expenses by changing values or deleting.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "JavaScript Clock",
+        shortDesc: "Clock made with JS",
+        thumbnail: "img/clock.png",
+        librariesUsed: "JavaScript",
+        longDesc: `
+            <p>
+                Clock made with JS, still improving. Could be a nice home page for your browser.
+            </p>
+        `,
+        showOff: false
+    },
+    {
+        title: "Tranquillity Linux",
+        shortDesc: "Arch based distro",
+        thumbnail: "img/tranquillity.png",
+        librariesUsed: "archiso - mkarchiso",
+        longDesc: `
+            <p>
+This distro has been made purely from a learning point of view, where I can make my own arch based distro, custom software, install it easily, with different desktop environments and in the mean time learn how this is done. I will continue to update this iso and consider making a dedicated web page for it to explain it's meaning. Made with Archiso - mkarchiso.             </p>
         `,
         showOff: true
     }
@@ -79,7 +162,9 @@ const maxDandelions = projects.length;
 /*
     TODO
     Each dandelion to have different speeds based on size (bigger is slower)
-    Add Thumbnail images for projects
+    Add Github Links
+    Add Codepen Links
+    Add space to thumbnails
 */
 
 // Initialise Functions
