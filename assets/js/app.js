@@ -112,7 +112,7 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
         Fade(_dandelion, 0.5);
         Blur(_dandelion, 3);
         PopulateGUI(_dandelion);
-        OpenGUI();
+        OpenGUI("project");
         _dandelion.userHovering = false;
 
     })

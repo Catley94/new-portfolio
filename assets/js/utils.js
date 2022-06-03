@@ -14,6 +14,31 @@ const maxDandelionXPosSpawn = -500;
 const maxDandelionYPosSpawn = window.innerHeight;
 const blurFilter1 = new PIXI.filters.BlurFilter();
 
+//GUI
+let guiOpen = false;
+let guiType = "";
+const overlay = document.querySelector("#overlay");
+const closeButton = document.querySelector("#closeButton");
+closeButton.addEventListener("click", () => {
+    CloseGUI(guiType);
+})
+const legendContent = document.querySelector("#legendContent");
+const projectContent = document.querySelector("#projectContent");
+const title = document.querySelector("#title");
+const libariesUsed = document.querySelector("#librariesUsed");
+const thumbnail = document.querySelector("#thumbnail");
+const shortDesc = document.querySelector("#shortDesc");
+const longDesc = document.querySelector("#longDesc");
+
+
+//SYMBOL BUTTON
+const legendButton = document.querySelector("#legend");
+legendButton.addEventListener("click", () => {
+  OpenGUI("legend");
+})
+
+
+//SHORT ON TIME BUTTON
 let contentBusyMind = false;
 let busyMindMode = false;
 const busyMindButton = document.querySelector("#busyMind");
@@ -41,19 +66,6 @@ window.addEventListener("resize", () => {
     }
 }, false)
 
-//GUI
-let guiOpen = false;
-const projectView = document.querySelector("#projectView");
-const closeButton = document.querySelector("#closeButton");
-closeButton.addEventListener("click", () => {
-    CloseGUI();
-})
-const content = document.querySelector("#content");
-const title = document.querySelector("#title");
-const libariesUsed = document.querySelector("#librariesUsed");
-const thumbnail = document.querySelector("#thumbnail");
-const shortDesc = document.querySelector("#shortDesc");
-const longDesc = document.querySelector("#longDesc");
 
 function SetupPixiStage() {
     return new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
@@ -170,20 +182,41 @@ function Fade(_dandelion, amount) {
     _dandelion.alpha = amount;
 }
 
-const CloseGUI = () => {
+const CloseGUI = (subGUI) => {
     //TODO Add fade out through CSS or JQuery
-    projectView.classList.remove("show");
-    projectView.classList.add("hide");
+    overlay.classList.remove("show");
+    overlay.classList.add("hide");
+    switch(subGUI) {
+        case "project":
+            projectContent.classList.remove("show");
+            projectContent.classList.add("hide");
+            break;
+        case "legend":
+            legendContent.classList.remove("show");
+            legendContent.classList.add("hide");
+            break;
+    }
 }
 
-const OpenGUI = () => {
+const OpenGUI = (subGUI) => {
     //TODO Add fade in through CSS or JQuery
-    projectView.classList.remove("hide");
-    projectView.classList.add("show");
+    overlay.classList.remove("hide");
+    overlay.classList.add("show");
+    switch(subGUI) {
+        case "project":
+            projectContent.classList.remove("hide");
+            projectContent.classList.add("show");
+            guiType = subGUI;
+            break;
+        case "legend":
+            legendContent.classList.remove("hide");
+            legendContent.classList.add("show");
+            break;
+    }
 }
 
 const CheckIfGuiOpen = () => {
-    projectView.classList.forEach((className) => {
+    overlay.classList.forEach((className) => {
         if(className === "hide") {
             if(guiOpen) {
                 guiOpen = false;

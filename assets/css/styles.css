@@ -29,38 +29,40 @@
     border-radius: 20px;
     padding: 0.5em;
     font-size: 2em;
-    border: 2px solid springgreen;
     text-align: right;
 }
 
-#projectView {
+#closeButton:hover{
+    background-color: lightgrey;
+}
+
+#overlay {
     position: absolute;
     background-color: rgba(255,255,255,0.6);
     width: 100vw;
     height: 100vh;
-    border: 5px solid purple;
 }
 
-#content {
-    border: 2px solid black;
+#legendContent {
+    position: absolute;
+}
+
+#projectContent {
     height: 100%;
 }
 
 #title {
-    border: 2px solid blue;
     text-align: center;
     margin: 10% 0px 2% 0px;
     width: 100vw;
 }
 
 #librariesUsed {
-    border: 2px solid orange;
     text-align: center;
     margin: 0.5em;
 }
 
 #thumbnail {
-    border: 2px solid orange;
     max-width: 20em;
     /*height: auto;*/
 
@@ -69,7 +71,6 @@
 #thumbnailDesc {
     display: flex;
     justify-content: space-around;
-    border: 5px solid lightblue;
 }
 
 #data {
@@ -77,13 +78,11 @@
 }
 
 #shortDesc {
-    border: 2px solid maroon;
     padding: 0.5em;
     text-align: center;
 }
 
 #longDesc {
-    border: 2px solid yellow;
     padding: 0.5em;
 }
 
