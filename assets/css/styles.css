@@ -5,6 +5,23 @@
     overflow: hidden;
 }
 
+#toolbar {
+    position: absolute;
+}
+
+#toolbar > * {
+    border: 2px solid lightgrey;
+    background-color: gray;
+    color: white;
+    padding: 1em;
+    opacity: 0.5;
+    border-radius: 1em;
+}
+
+#toolbar > *:hover {
+    opacity: 0.7;
+}
+
 #closeButton {
     position: absolute;
     right: 1em;

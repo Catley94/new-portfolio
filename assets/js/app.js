@@ -1,33 +1,19 @@
-// VARIABLES
-let app = SetupPixiStage();
-let backgroundContainer = new PIXI.Container();
-let dandelionContainer = new PIXI.Container();
-let background;
-let dandelionSeed;
-let dandelions = [];
-let preDandelionSeed = [];
-const maxWindSpeed = 3;
-const floatingSpeed = 0.01;
-const maxDandelionXPosSpawn = -500;
-const maxDandelionYPosSpawn = window.innerHeight;
-
-const blurFilter1 = new PIXI.filters.BlurFilter();
-
-
 const projects = [
     {
         Title: "Inverted Wings",
         ShortDesc: "Music Visualiser",
         Thumbnail: "",
         LibrariesUsed: "P5.JS",
-        LongDesc: "Inverted Wings use lines grounded on a pulsing circle. Bass circles will omit once volume exceeds certain amount. Made with P5.js."
+        LongDesc: "Inverted Wings use lines grounded on a pulsing circle. Bass circles will omit once volume exceeds certain amount. Made with P5.js.",
+        showOff: true
     },
     {
         Title: "Text adventure template",
         ShortDesc: "Template for creating text adventure games",
         Thumbnail: "",
         LibrariesUsed: "",
-        LongDesc: "Text adventure template is exactly that, a template that allows others to edit and create their own two option text adventure game. This was originally created for covid lockdown for creativity, it's made for simplicity, everything is dynamic, all you need to do is add the state onto the storyBook object and the rest will happen like magic!"
+        LongDesc: "Text adventure template is exactly that, a template that allows others to edit and create their own two option text adventure game. This was originally created for covid lockdown for creativity, it's made for simplicity, everything is dynamic, all you need to do is add the state onto the storyBook object and the rest will happen like magic!",
+        showOff: false
     }
 ]
 
@@ -35,7 +21,6 @@ const maxDandelions = projects.length;
 
 /*
     TODO
-    BUG: Fix scaling of images
     Each dandelion to have different speeds based on size (bigger is slower)
     Add Thumbnail images for projects
 */
@@ -96,9 +81,16 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     function _AssignProject(item) {
         item.project = projects[item.id];
     }
+
+
+    function _CheckIfShowOffProject() {
+        return _dandelion.project.showOff ? scale * maxDandelionSize : scale * minDandelionSize;
+    }
+
     _dandelion.id = dandelions.length;
-    _dandelion.scale.x = scale;
-    _dandelion.scale.y = scale;
+    _AssignProject(_dandelion);
+    _dandelion.scale.x = _CheckIfShowOffProject();
+    _dandelion.scale.y = _CheckIfShowOffProject();
     _dandelion.xSpeed = 0;
     _dandelion.ySpeed = 0;
     _dandelion.originalXPos = xPos;
@@ -109,7 +101,7 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
     _dandelion.userHovering = false;
     _dandelion.interactive = true;
 
-    _AssignProject(_dandelion);
+
 
     _dandelion.on("pointerover", () => {
         _dandelion.userHovering = true;
@@ -140,6 +132,24 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
 app.ticker.add((delta) => {
     CheckIfGuiOpen();
     if(dandelions) {
+        if(contentBusyMind !== busyMindMode) {
+            if(busyMindMode) {
+                dandelions.forEach((dandelion) => {
+                    dandelion.x = RandomBetween(0, window.innerWidth - dandelion.width);
+                    dandelion.y = RandomBetween(0, window.innerHeight - dandelion.height);
+                    contentBusyMind = true;
+                })
+            } else if(!busyMindMode) {
+                dandelions.forEach((dandelion) => {
+                    dandelion.x = dandelion.originalXPos;
+                    dandelion.y = dandelion.originalYPos;
+                    dandelion.xSpeed = 0;
+                    dandelion.ySpeed = 0;
+                    contentBusyMind = false;
+                })
+            }
+
+        }
         dandelions.forEach((dandelion) => {
             if(!dandelion.userHovering) {
                 CheckDandelionSpeed(dandelion);
@@ -149,6 +159,7 @@ app.ticker.add((delta) => {
 
         })
     }
+    busyMind = busyMindMode;
 });
 
 SetupLoader();

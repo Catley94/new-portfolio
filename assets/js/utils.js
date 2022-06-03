@@ -1,4 +1,45 @@
-let scale = (window.innerHeight / window.innerWidth) * 0.5;
+// VARIABLES
+let app = SetupPixiStage();
+let backgroundContainer = new PIXI.Container();
+let dandelionContainer = new PIXI.Container();
+let background;
+let dandelionSeed;
+let dandelions = [];
+let preDandelionSeed = [];
+const minDandelionSize = 0.25;
+const maxDandelionSize = 0.35;
+const maxWindSpeed = 3;
+const floatingSpeed = 0.01;
+const maxDandelionXPosSpawn = -500;
+const maxDandelionYPosSpawn = window.innerHeight;
+const blurFilter1 = new PIXI.filters.BlurFilter();
+
+let contentBusyMind = false;
+let busyMindMode = false;
+const busyMindButton = document.querySelector("#busyMind");
+busyMindButton.addEventListener("click", () => {
+    busyMindMode = !busyMindMode;
+    if(busyMindMode) {
+        busyMindButton.textContent = "Go to mindfulness mode";
+    } else if(!busyMindMode) {
+        busyMindButton.textContent = "Short on time?";
+    }
+    console.log("busyMindMode: ", busyMindMode);
+})
+
+
+//RESIZE
+let ratio, windowRatio;
+const w = window.innerWidth, h = window.innerHeight;
+scale = w / 1024;
+
+window.addEventListener("resize", () => {
+    ratio = 1024 / 768;
+    windowRatio = w / h;
+    if(windowRatio > ratio) {
+        scale = h / 768;
+    }
+}, false)
 
 //GUI
 let guiOpen = false;
@@ -85,23 +126,39 @@ function GenerateRandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
 
+function RandomBetween(min, max) {
+    return Math.floor((Math.random() * (max - min) + min));
+}
+
 function GenerateRandomWindSpeed() {
     return GenerateRandomNumber(maxWindSpeed);
 }
 
 function CheckIfExceedsBounds(dandelion) {
-    const dandelionXPosOffScreen = dandelion.x - dandelion.width >= window.innerWidth;
-    const dandelionYPosOffScreen = dandelion.y - (dandelion.height) * 0.5 > window.innerHeight || dandelion.y + (dandelion.height) * 0.5 < 0;
-    // Two dandelion's width worth off screen, move Dandelion to left side of screen.
-    if (dandelionXPosOffScreen) {
-        dandelion.x = GenerateRandomNumber(maxDandelionXPosSpawn);
+    if(!busyMindMode) {
+        const dandelionXPosOffScreen = dandelion.x - dandelion.width >= window.innerWidth;
+        const dandelionYPosOffScreen = dandelion.y - (dandelion.height) * 0.5 > window.innerHeight || dandelion.y + (dandelion.height) * 0.5 < 0;
+        // Two dandelion's width worth off screen, move Dandelion to left side of screen.
+        if (dandelionXPosOffScreen) {
+            dandelion.x = GenerateRandomNumber(maxDandelionXPosSpawn);
+        }
+        // One and half dandelion's height worth off screen (both top and bottom of screen),
+        // And
+        // move Dandelion to left side of screen.
+        if (dandelionYPosOffScreen && !dandelionXPosOffScreen) {
+            dandelion.x = GenerateRandomNumber(maxDandelionXPosSpawn);
+        }
+    } else if(busyMindMode) {
+        const dandelionXPosOffScreen = dandelion.x + dandelion.width >= window.innerWidth || dandelion.x < 0;
+        const dandelionYPosOffScreen = dandelion.y +dandelion.height > window.innerHeight || dandelion.y < 0;
+        if(dandelionXPosOffScreen) {
+            dandelion.xSpeed = -dandelion.xSpeed;
+        }
+        if(dandelionYPosOffScreen) {
+            dandelion.ySpeed = -dandelion.ySpeed;
+        }
     }
-    // One and half dandelion's height worth off screen (both top and bottom of screen),
-    // And
-    // move Dandelion to left side of screen.
-    if (dandelionYPosOffScreen && !dandelionXPosOffScreen) {
-        dandelion.x = GenerateRandomNumber(maxDandelionXPosSpawn);
-    }
+
 }
 
 function Blur(_dandelion, amount) {
