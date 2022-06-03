@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
     <script src="lib/pixi.js"></script>
-    <style>
-        * {
-            border: 0px;
-            margin: 0px;
-            padding: 0px;
-            overflow: hidden;
-        }
-    </style>
     <title>Hello PixiJS!</title>
 </head>
 <body>
-    <script src="assets/utils.js"></script>
-    <script src="assets/app.js"></script>
+    <div id="projectView" class="hide">
+        <button id="closeButton">X</button>
+        <div id="content">
+            <h1 id="title">Test Title</h1>
+            <div id="librariesUsed">Test Library</div>
+            <div id="thumbnailDesc">
+                <img id="thumbnail" src="#" />
+                <div id="data">
+                    <h5 id="shortDesc">What is Lorem Ipsum?</h5>
+                    <h5 id="longDesc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut imperdiet neque, a scelerisque diam. Duis imperdiet eu ligula vel malesuada. Nunc quis sodales odio, at scelerisque mi. Nullam lacinia id quam ac lobortis. Mauris a tortor quis lacus cursus iaculis. Proin vitae lorem at tellus suscipit mattis egestas vehicula lacus. Morbi gravida sit amet felis eget convallis. Sed sed luctus nibh. Mauris urna ex, luctus id blandit a, condimentum quis diam.
+
+                        Nunc rhoncus velit ac erat feugiat, ac malesuada metus ultrices. Vestibulum non felis sit amet sapien pellentesque finibus consequat in turpis. Etiam porttitor sollicitudin leo, nec luctus magna. Praesent suscipit eget elit ac finibus. Morbi sed diam sodales, consequat augue sit amet, sollicitudin lacus. Vestibulum non malesuada tellus. Cras luctus risus vel sem tincidunt, non tempor eros egestas. Morbi lectus ligula, venenatis sed nibh sed, efficitur iaculis quam. Donec quis ante non quam maximus cursus nec eu nisi. Ut feugiat lobortis leo, at eleifend magna. Maecenas nisi massa, mollis nec eleifend nec, luctus vel mauris. Sed imperdiet, sem eget venenatis ultricies, odio tortor finibus neque, quis mollis dolor ante eu lectus. Sed sed tortor eget diam tincidunt mattis sit amet vitae dui.
+
+                        Vestibulum vestibulum ut est consequat condimentum. Nunc ipsum nulla, pellentesque a sapien nec, pharetra lacinia nunc. Nullam sed lorem ac ex imperdiet blandit vel in dolor. Morbi pharetra elementum diam et facilisis. Integer eget neque bibendum, consequat ligula at, vehicula quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin tempor vehicula egestas.                     </h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
