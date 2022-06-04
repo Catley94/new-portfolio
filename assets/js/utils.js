@@ -6,7 +6,6 @@ let background;
 let dandelionSeed;
 let dandelions = [];
 let preDandelionSeed = [];
-let hoveringDandelion = false;
 const minDandelionSize = 0.25;
 const maxDandelionSize = 0.35;
 const maxWindSpeed = 3;

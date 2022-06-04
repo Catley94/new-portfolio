@@ -85,11 +85,9 @@ function SpawnDandelion(_dandelion, xPos, yPos) {
 
     _dandelion.on("pointerover", () => {
         _dandelion.userHovering = true;
-
         dandelions.forEach((dandelion) => {
             if(dandelion.id === _dandelion.id) {
                 dandelionContainer.setChildIndex(dandelion, dandelionContainer.children.length - 1);
-
             }
         })
     })
