@@ -1,44 +1,27 @@
-// VARIABLES
+// PIXI
 let app = SetupPixiStage();
 let backgroundContainer = new PIXI.Container();
 let dandelionContainer = new PIXI.Container();
+const blurFilter1 = new PIXI.filters.BlurFilter();
+// ________________________
 let background;
+
+let guiOpen = false;
+
 let dandelionSeed;
 let dandelions = [];
 let preDandelionSeed = [];
 const minDandelionSize = 0.25;
 const maxDandelionSize = 0.35;
-const maxWindSpeed = 3;
-const floatingSpeed = 0.01;
 const maxDandelionXPosSpawn = -500;
 const maxDandelionYPosSpawn = window.innerHeight;
 const maxDandelions = projects.length;
-const blurFilter1 = new PIXI.filters.BlurFilter();
 
+const maxWindSpeed = 3;
+const floatingSpeed = 0.01;
 
-//Selectors
-const content = document.querySelector("#content");
-const title = document.querySelector("#title");
-const libariesUsed = document.querySelector("#librariesUsed");
-let thumbnail = document.querySelector("#thumbnail");
-const shortDesc = document.querySelector("#shortDesc");
-const longDesc = document.querySelector("#longDesc");
-const demoButton = document.querySelector("#demoButton");
-const githubButton = document.querySelector("#githubButton");
-
-//GUI
-let guiOpen = false;
-const overlay = document.querySelector("#overlay");
-
-const closeButton = document.querySelector("#closeButton");
-closeButton.addEventListener("click", () => {
-    CloseGUI();
-})
-window.addEventListener('keydown', (e) => {
-    if(e.code === "Escape" && guiOpen) {
-        CloseGUI();
-    }
-})
+let contentBusyMind = false;
+let busyMindMode = false;
 
 
 
@@ -64,109 +47,14 @@ function HideDemoButton() {
     demoButton.classList.add("hide")
 }
 
-//SYMBOL BUTTON
-const legendButton = document.querySelector("#legend");
-legendButton.addEventListener("click", () => {
-    PopulateGUI(
-        legend,
-        "legend"
-    )
-    OpenGUI();
-})
-
-//ABOUT BUTTON
-const aboutButton = document.querySelector("#aboutMe");
-aboutButton.addEventListener("click", () => {
-    PopulateGUI(
-        {
-            title: "Short and Sweet",
-            thumbnail: "",
-            longDesc: `
-                <div id="about">
-                    <p>
-                    <p class="heading">Welcome, to my portfolio!<br/><br/></p>
-    
-                    I hope you are well at this current time.<br/><br/>
-    
-                    I am a frontend / backend / games developer with a passion for learning, improving oneself and a Linux enthusiast.<br/><br/>
-    
-                    <em><u>Because I am a huge fan of mindfulness and meditation, my portfolio is themed around this, though I encourage everyone to practise meditation and mindfulness, I appreciate you may not have the time to take to see my portfolio in this light, therefore I have added a "Short on time?" mode, please feel free to use it. I hope you like the uniqueness.</u></em>
-                  </p>
-                  <p class="heading">What technologies have I worked with (To name a few...)?</p>
-                  <p>
-                    <ul>
-                      Frontend:
-                      <li>  React, Vue, Typescript, Bootstrap, P5, Ionic and more!</li>
-    
-                      Backend:
-                      <li>  NodeJS, Electron, Express, C#, SQL, MongoDB and Arduino.</li>
-    
-                      Games:
-                      <li>Phaser, CreateJS, PixiJS and Unity.</li>
-    
-                </ul>
-                  </p>
-                  <p class="heading">A bit about me</p>
-                  <p>
-                    First and foremost is I am eager to learn as much as I can, self improvement in both a personal and work sense highly appeals to me.
-                    My IT experience compliments my development career as it gives me a very rounded view on how technology works as a whole, allowing me to think outside the box.
-    
-                    I very much enjoy structure mixed with creativity, this is perfect within development as it allows me to come up with unique results and ideas.
-    
-                    In my spare time, I'm creating my own MMORPG game using Unity as the game engine, this has taught me a lot and the knowledge I have gained I am currently using within a work environment, it has excelled my learning experience because of my eargerness and urge to continously improve myself.
-    
-                    I also implement programming electronic solutions with a Raspberry Pi and Arduinos, my latest project is a replicating remote control.
-    
-                    Last thing you'll need to know about me, is I have a passion for Linux (Though will use all other OS's), this was born out of the years of Windows Updates randomly turning off my computer, and uninvited BSODs through the years.
-    
-                    I have found Linux to be not only reliable, but powerful for a power user, it's sped up so much of my workflow in my personal time.
-    
-                  </p>
-                </div>
-                
-            `
-        },
-        "about"
-    )
-    OpenGUI();
-})
-
-
-//SHORT ON TIME BUTTON
-let contentBusyMind = false;
-let busyMindMode = false;
-const busyMindButton = document.querySelector("#busyMind");
-busyMindButton.addEventListener("click", () => {
-    busyMindMode = !busyMindMode;
-    if(busyMindMode) {
-        busyMindButton.textContent = "Go to mindfulness mode";
-    } else if(!busyMindMode) {
-        busyMindButton.textContent = "Short on time?";
-    }
-    console.log("busyMindMode: ", busyMindMode);
-})
-
 
 //RESIZE
 let ratio, windowRatio;
 const w = window.innerWidth, h = window.innerHeight;
 scale = w / 1024;
 
-window.addEventListener("resize", () => {
-    ratio = 1024 / 768;
-    windowRatio = w / h;
-    if(windowRatio > ratio) {
-        scale = h / 768;
-    }
-}, false)
-
-
 function SetupPixiStage() {
     return new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
-}
-
-function SetupPixiStageRenderer() {
-    return new PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, { antialias: true });
 }
 
 function AddContainerToStage(container) {
