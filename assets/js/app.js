@@ -5,7 +5,9 @@ const projects = [
         thumbnail: "",
         librariesUsed: "P5.JS",
         longDesc: "Inverted Wings use lines grounded on a pulsing circle. Bass circles will omit once volume exceeds certain amount. Made with P5.js.",
-        showOff: true
+        showOff: true,
+        demo: "https://codepen.io/Catley94/full/JjoyLPQ",
+        github: "https://github.com/Catley94/musicVisualizer"
     },
     {
         title: "Text adventure template",
@@ -13,7 +15,9 @@ const projects = [
         thumbnail: "",
         librariesUsed: "",
         longDesc: "Text adventure template is exactly that, a template that allows others to edit and create their own two option text adventure game. This was originally created for covid lockdown for creativity, it's made for simplicity, everything is dynamic, all you need to do is add the state onto the storyBook object and the rest will happen like magic!",
-        showOff: false
+        showOff: false,
+        demo: "",
+        github: "https://github.com/Catley94/text-adventure-game-template"
     },
     {
         title: "AskSam",
@@ -25,7 +29,9 @@ const projects = [
             AskSam is an SPA built with Vue (and Axios) on the Frontend and NodeJS on the backend.
             The purpose is for anyone to submit a question on the front facing SPA (the user can submit as many questions as they like in one session or multiple), which will both create a cookie on the user's browser with the questionID (so it is able to keep track if the question has been answered) and submits the question to the database (MongoDB). There is also another SPA for 'internal' or 'staff' use, on this SPA it will display all the unanswered questions in a list, the 'staff' member can click on any unanswered question (sorted from oldest at the top, newest at the bottom) and answer it, once answered it will update the database to mark this question as answered. When the user visits the website, it will check the database with the questionID in their cookie, if the question has been answered, it will update their page with the question as 'Answered', they then may click and view the answer given.
             `,
-        showOff: true
+        showOff: true,
+        demo: "",
+        github: ""
     },
     {
         title: "Spirit Animals",
@@ -36,7 +42,9 @@ const projects = [
             This is a private repo, in order to view the code, you must ask for permission by contacting me. <br/><br/>
             Spirit Animals is an MMORPG which I am currently creating, built in Unity, this game has been built from the ground up, this includes, planning out a brief overview of the game, objective and story line, using best practises whilst keeping in mind to prevent circle of dependencies, implementing movement of the character, including animation for evolution, inventory system, drop and pick up item system, system settings, stats for characters, attacking, talking with NPCs, Questing and much more!
         `,
-        showOff: true
+        showOff: true,
+        demo: "",
+        github: ""
     },
     {
         title: "Various work games",
@@ -53,7 +61,9 @@ const projects = [
                 <li>And more!</li><br/>
             </ul>
         `,
-        showOff: true
+        showOff: true,
+        demo: "",
+        github: ""
     },
     {
         title: "Exercise Trainer App",
@@ -70,7 +80,9 @@ const projects = [
 I do have a standalone .apk which I have made within Android Studio (using the ionic API capacitor), so can pass this on through email or shared link, it is my hope in the near future I may publish this on Google Play so others can enjoy the benefit this app can bring. <br/>
             </p>
         `,
-        showOff: true
+        showOff: true,
+        demo: "",
+        github: "https://github.com/Catley94/Exercise_Trainer_App"
     },
     {
         title: "Flex Panels",
@@ -82,7 +94,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                  This project I did when doing the JavaScript30 challenge with WesBos, he shows you how to create 5 'panels' that 'flex' when clicked, using bezier curves making the panels expand out and then retract before settling. By default it displays "Let's take it all in", but when clicking on individual panels it displays messages specific to the panel.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/Flex-Panels/",
+        github: "https://github.com/Catley94/Flex-Panels"
     },
     {
         title: "Jumper",
@@ -94,7 +108,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                 This game has been buit with the impossible game in mind, however this is still in progress.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/Jumper/",
+        github: "https://github.com/Catley94/Jumper"
     },
     {
         title: "Particles",
@@ -106,7 +122,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                 Particles moving in random directions with a variation of 3 colours, when hovered over, a radius around the mouse will 'grow', when they leave the radius they shrink back to their original size.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/particles/",
+        github: "https://github.com/Catley94/particles"
     },
     {
         title: "JavaScript Drum Kit",
@@ -118,7 +136,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                 Drumkit made with JS, 9 keys that trigger sounds when pressed and a border around it indicating which key was pressed.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/JavaScript-Drum-Kit/",
+        github: "https://github.com/Catley94/JavaScript-Drum-Kit"
     },
     {
         title: "Simple Budget App",
@@ -130,7 +150,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                 Takes a budget amount, takes multiple expenses, minuses from the budget amount to get what is left over. Can also edit existing list of expenses by changing values or deleting.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/BudgetProject/",
+        github: "https://github.com/Catley94/BudgetProject"
     },
     {
         title: "JavaScript Clock",
@@ -142,7 +164,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
                 Clock made with JS, still improving. Could be a nice home page for your browser.
             </p>
         `,
-        showOff: false
+        showOff: false,
+        demo: "https://catley94.github.io/JavaScript-Clock/",
+        github: "https://github.com/Catley94/JavaScript-Clock"
     },
     {
         title: "Tranquillity Linux",
@@ -153,7 +177,9 @@ I do have a standalone .apk which I have made within Android Studio (using the i
             <p>
 This distro has been made purely from a learning point of view, where I can make my own arch based distro, custom software, install it easily, with different desktop environments and in the mean time learn how this is done. I will continue to update this iso and consider making a dedicated web page for it to explain it's meaning. Made with Archiso - mkarchiso.             </p>
         `,
-        showOff: true
+        showOff: true,
+        demo: "",
+        github: ""
     }
 ]
 

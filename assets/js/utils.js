@@ -27,6 +27,8 @@ const libariesUsed = document.querySelector("#librariesUsed");
 let thumbnail = document.querySelector("#thumbnail");
 const shortDesc = document.querySelector("#shortDesc");
 const longDesc = document.querySelector("#longDesc");
+const demoButton = document.querySelector("#demoButton");
+const githubButton = document.querySelector("#githubButton");
 
 
 //SYMBOL BUTTON
@@ -281,6 +283,27 @@ const PopulateGUI = (_object, type) => {
             thumbnail.src = _object.project.thumbnail;
             shortDesc.textContent = _object.project.shortDesc;
             longDesc.innerHTML = _object.project.longDesc;
+            if(_object.project.demo) {
+                demoButton.href = _object.project.demo;
+                demoButton.classList.remove("hide");
+                demoButton.classList.add("show");
+            } else {
+                if(!demoButton.classList.contains("hide")) {
+                    demoButton.classList.remove("show");
+                    demoButton.classList.add("hide");
+                }
+            }
+            if(_object.project.demo) {
+                githubButton.href = _object.project.github;
+                githubButton.classList.remove("hide");
+                githubButton.classList.add("show");
+            } else {
+                if(!githubButton.classList.contains("hide")) {
+                    githubButton.classList.remove("show");
+                    githubButton.classList.add("hide");
+                }
+            }
+            demoButton
             break;
         case "legend":
             // thumbnail.classList.remove("hide");
