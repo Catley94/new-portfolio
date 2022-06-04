@@ -152,3 +152,8 @@
 #about {
     font-size: 0.8em; !important;
 }
+
+#email {
+    color: inherit;
+    
+}
