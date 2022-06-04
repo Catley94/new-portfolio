@@ -68,11 +68,7 @@ function HideDemoButton() {
 const legendButton = document.querySelector("#legend");
 legendButton.addEventListener("click", () => {
     PopulateGUI(
-        {
-            title: "Symbols",
-            thumbnail: "img/dandelionSeed.png",
-            longDesc: "Look out for the Dandelion Seed, click them to see different projects."
-        },
+        legend,
         "legend"
     )
     OpenGUI();
