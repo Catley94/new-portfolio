@@ -68,8 +68,9 @@
 
 #demoButton {
     text-decoration: none;
-    background-color: lightgrey;
-    color: black;
+    background-color: gray;
+    opacity: 0.7;
+    color: white;
     position: absolute;
     padding: 0.2em;
     border-radius: 0.5em;
@@ -78,16 +79,27 @@
     font-size: 1em;
 }
 
+#demoButton:hover {
+    background-color: gray;
+    opacity: 1;
+}
+
 #githubButton {
     text-decoration: none;
-    background-color: lightgrey;
-    color: black;
+    background-color: gray;
+    opacity: 0.7;
+    color: white;
     position: absolute;
     padding: 0.2em;
     border-radius: 0.5em;
     left: 7em;
     bottom: 5em;
     font-size: 1em;
+}
+
+#githubButton:hover {
+    background-color: gray;
+    opacity: 1;
 }
 
 #thumbnailDesc {

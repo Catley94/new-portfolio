@@ -87,7 +87,7 @@ I do have a standalone .apk which I have made within Android Studio (using the i
     {
         title: "Flex Panels",
         shortDesc: "Panels that open when clicked",
-        thumbnail: "",
+        thumbnail: "img/flex_panels.png",
         librariesUsed: "JavaScript",
         longDesc: `
             <p>
