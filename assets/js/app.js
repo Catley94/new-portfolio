@@ -6,11 +6,12 @@
 */
 
 // Initialise Functions
+let app = SetupPixiStage();
 AddStageToHTML();
 AddContainerToStage(backgroundContainer);
 AddContainerToStage(dandelionContainer);
 
-function SetupLoader() {
+const SetupLoader = () => {
     const loader = new PIXI.Loader();
     loader.add('backgroundImage', 'img/colton-sturgeon-6KkYYqTEDwQ-unsplash.jpg');
     loader.add('dandelionSeed', 'img/dandelionSeed.png');
@@ -40,7 +41,7 @@ function SetupLoader() {
 }
 
 
-function SetUpBackground(_background) {
+const SetUpBackground = (_background) => {
     let width = window.innerWidth / _background.width;
     let height = window.innerHeight / _background.height;
 
@@ -49,21 +50,21 @@ function SetUpBackground(_background) {
     AddToContainer(backgroundContainer, _background);
 }
 
-function AddToDandelionsArray(_image) {
+const AddToDandelionsArray = (_image) => {
     dandelions.push(_image);
 }
 
 
 
 
-function SpawnDandelion(_dandelion, xPos, yPos) {
+const SpawnDandelion = (_dandelion, xPos, yPos) => {
     //Private functions
-    function _AssignProject(item) {
+    const _AssignProject = (item) => {
         item.project = projects[item.id];
     }
 
 
-    function _CheckIfShowOffProject() {
+    const _CheckIfShowOffProject = () => {
         return _dandelion.project.showOff ? scale * maxDandelionSize : scale * minDandelionSize;
     }
 

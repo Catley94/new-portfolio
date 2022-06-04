@@ -1,9 +1,7 @@
-// PIXI
-let app = SetupPixiStage();
 let backgroundContainer = new PIXI.Container();
 let dandelionContainer = new PIXI.Container();
 const blurFilter1 = new PIXI.filters.BlurFilter();
-// ________________________
+
 let background;
 
 let guiOpen = false;
@@ -27,22 +25,22 @@ let busyMindMode = false;
 
 // DEMO AND GITHUB BUTTONS
 
-function ShowGithubButton() {
+const ShowGithubButton = () => {
     githubButton.classList.remove("hide");
     githubButton.classList.add("show");
 }
 
-function ShowDemoButton() {
+const ShowDemoButton = () => {
     demoButton.classList.remove("hide");
     demoButton.classList.add("show");
 }
 
-function HideGithubButton() {
+const HideGithubButton = () => {
     githubButton.classList.remove("show");
     githubButton.classList.add("hide")
 }
 
-function HideDemoButton() {
+const HideDemoButton = () => {
     demoButton.classList.remove("show");
     demoButton.classList.add("hide")
 }
@@ -53,19 +51,19 @@ let ratio, windowRatio;
 const w = window.innerWidth, h = window.innerHeight;
 scale = w / 1024;
 
-function SetupPixiStage() {
+const SetupPixiStage = () => {
     return new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
 }
 
-function AddContainerToStage(container) {
+const AddContainerToStage = (container) => {
     app.stage.addChild(container);
 }
 
-function AddStageToHTML() {
+const AddStageToHTML = () => {
     document.body.appendChild(app.view);
 }
 
-function AddToContainer(container, item) {
+const AddToContainer = (container, item) => {
     container.addChild(item);
 }
 
@@ -93,7 +91,7 @@ const decrementSpeed = (item, _amount) => {
 }
 
 
-function CheckDandelionSpeed(dandelion) {
+const CheckDandelionSpeed = (dandelion) => {
     if (dandelion.xSpeed === 0) {
         const windSpeed = GenerateRandomWindSpeed();
         AssignWindSpeed(dandelion, windSpeed);
@@ -107,8 +105,8 @@ function CheckDandelionSpeed(dandelion) {
 }
 
 
-function MoveDandelion(dandelion) {
-    function _MoveXPosition() {
+const MoveDandelion = (dandelion) => {
+    const _MoveXPosition = () => {
         dandelion.x += dandelion.xSpeed;
     }
 
@@ -116,19 +114,19 @@ function MoveDandelion(dandelion) {
     StartFloating(dandelion);
 }
 
-function GenerateRandomNumber(max) {
+const GenerateRandomNumber = (max) => {
     return Math.floor(Math.random() * max);
 }
 
-function RandomBetween(min, max) {
+const RandomBetween = (min, max) => {
     return Math.floor((Math.random() * (max - min) + min));
 }
 
-function GenerateRandomWindSpeed() {
+const GenerateRandomWindSpeed = () => {
     return GenerateRandomNumber(maxWindSpeed);
 }
 
-function CheckIfExceedsBounds(dandelion) {
+const CheckIfExceedsBounds = (dandelion) => {
     if(!busyMindMode) {
         const dandelionXPosOffScreen = dandelion.x - dandelion.width >= window.innerWidth;
         const dandelionYPosOffScreen = dandelion.y - (dandelion.height) * 0.5 > window.innerHeight || dandelion.y + (dandelion.height) * 0.5 < 0;
@@ -155,12 +153,12 @@ function CheckIfExceedsBounds(dandelion) {
 
 }
 
-function Blur(_dandelion, amount) {
+const Blur = (_dandelion, amount) => {
     _dandelion.filters = [blurFilter1];
     blurFilter1.blur = amount;
 }
 
-function Fade(_dandelion, amount) {
+const Fade = (_dandelion, amount) => {
     _dandelion.alpha = amount;
 }
 
