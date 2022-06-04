@@ -6,21 +6,18 @@ let background;
 let dandelionSeed;
 let dandelions = [];
 let preDandelionSeed = [];
+let hoveringDandelion = false;
 const minDandelionSize = 0.25;
 const maxDandelionSize = 0.35;
 const maxWindSpeed = 3;
 const floatingSpeed = 0.01;
 const maxDandelionXPosSpawn = -500;
 const maxDandelionYPosSpawn = window.innerHeight;
+const maxDandelions = projects.length;
 const blurFilter1 = new PIXI.filters.BlurFilter();
 
-//GUI
-let guiOpen = false;
-const overlay = document.querySelector("#overlay");
-const closeButton = document.querySelector("#closeButton");
-closeButton.addEventListener("click", () => {
-    CloseGUI();
-})
+
+//Selectors
 const content = document.querySelector("#content");
 const title = document.querySelector("#title");
 const libariesUsed = document.querySelector("#librariesUsed");
@@ -30,6 +27,43 @@ const longDesc = document.querySelector("#longDesc");
 const demoButton = document.querySelector("#demoButton");
 const githubButton = document.querySelector("#githubButton");
 
+//GUI
+let guiOpen = false;
+const overlay = document.querySelector("#overlay");
+
+const closeButton = document.querySelector("#closeButton");
+closeButton.addEventListener("click", () => {
+    CloseGUI();
+})
+window.addEventListener('keydown', (e) => {
+    if(e.code === "Escape" && guiOpen) {
+        CloseGUI();
+    }
+})
+
+
+
+// DEMO AND GITHUB BUTTONS
+
+function ShowGithubButton() {
+    githubButton.classList.remove("hide");
+    githubButton.classList.add("show");
+}
+
+function ShowDemoButton() {
+    demoButton.classList.remove("hide");
+    demoButton.classList.add("show");
+}
+
+function HideGithubButton() {
+    githubButton.classList.remove("show");
+    githubButton.classList.add("hide")
+}
+
+function HideDemoButton() {
+    demoButton.classList.remove("show");
+    demoButton.classList.add("hide")
+}
 
 //SYMBOL BUTTON
 const legendButton = document.querySelector("#legend");
@@ -247,10 +281,14 @@ function Fade(_dandelion, amount) {
     _dandelion.alpha = amount;
 }
 
+
+
 const CloseGUI = () => {
     //TODO Add fade out through CSS or JQuery
     overlay.classList.remove("show");
     overlay.classList.add("hide");
+    HideDemoButton();
+    HideGithubButton();
 }
 
 const OpenGUI = () => {
@@ -273,6 +311,8 @@ const CheckIfGuiOpen = () => {
     })
 }
 
+
+
 const PopulateGUI = (_object, type) => {
     switch(type) {
         case "project":
@@ -285,22 +325,18 @@ const PopulateGUI = (_object, type) => {
             longDesc.innerHTML = _object.project.longDesc;
             if(_object.project.demo) {
                 demoButton.href = _object.project.demo;
-                demoButton.classList.remove("hide");
-                demoButton.classList.add("show");
+                ShowDemoButton();
             } else {
                 if(!demoButton.classList.contains("hide")) {
-                    demoButton.classList.remove("show");
-                    demoButton.classList.add("hide");
+                    HideDemoButton();
                 }
             }
             if(_object.project.demo) {
                 githubButton.href = _object.project.github;
-                githubButton.classList.remove("hide");
-                githubButton.classList.add("show");
+                ShowGithubButton();
             } else {
                 if(!githubButton.classList.contains("hide")) {
-                    githubButton.classList.remove("show");
-                    githubButton.classList.add("hide");
+                    HideGithubButton();
                 }
             }
             demoButton
