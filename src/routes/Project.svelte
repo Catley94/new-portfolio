@@ -5,6 +5,7 @@
     export let googlePlayLink; //Replace with google play icon
     export let githubLink; //Replace with GitHub icon
     export let image;
+    export let video;
 </script>
 
 <style lang="postcss">
@@ -16,8 +17,14 @@
 <div class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
     <div class="md:flex">
         <div class="md:shrink-0">
-<!--            <video></video>-->
-            <img class="h-48 w-full object-cover md:h-full md:w-48" src={image} alt="Modern building architecture">
+            {#if video}
+            <video class="h-64 w-full object-cover md:h-full md:w-64" src={video} loop autoplay>
+                <track kind="captions" />
+            </video>
+            {:else}
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src={image} alt="Modern building architecture">
+            {/if}
+
         </div>
         <div class="p-8">
             <div class="uppercase tracking-wide text-xl text-blue-500 font-semibold">{name}</div>

@@ -15,7 +15,8 @@
             Integer id elit rutrum, tincidunt libero et, sollicitudin nisi. Proin dapibus diam nisi, a semper felis faucibus ac.`,
             googlePlayLink: "dsds",
             githubLink: "https://github.com/catley94",
-            image: "/building.jpg"
+            image: "/building.jpg",
+            video: "/Videos/Chakra Idle.mp4"
         },
         {
             name: "test2",
@@ -29,7 +30,8 @@
             Integer id elit rutrum, tincidunt libero et, sollicitudin nisi. Proin dapibus diam nisi, a semper felis faucibus ac.`,
             googlePlayLink: "",
             githubLink: "",
-            image: "verne-ho-0LAJfSNa-xQ-unsplash.jpg"
+            image: "verne-ho-0LAJfSNa-xQ-unsplash.jpg",
+            video: "/Videos/Ball Launcher.mp4"
         }
     ]
 
