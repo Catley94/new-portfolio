@@ -1,6 +1,6 @@
 <script>
     import Project from "./Project.svelte";
-    import PrimaryHeader from "./PrimaryHeader.svelte";
+    import PrimaryHeader from "./PrimaryHeading.svelte";
 
     const projects = [
         {

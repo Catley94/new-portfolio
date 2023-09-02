@@ -13,7 +13,7 @@
     }
 </style>
 
-<div class="project drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
+<div class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
     <div class="md:flex">
         <div class="md:shrink-0">
 <!--            <video></video>-->
@@ -21,7 +21,7 @@
         </div>
         <div class="p-8">
             <div class="uppercase tracking-wide text-xl text-blue-500 font-semibold">{name}</div>
-                <p class="block mt-1 text-lg leading-tight font-medium text-black">{catchLine}</p>
+                <p class="block mt-1 text-lg leading-tight font-medium">{catchLine}</p>
             <div class="grid gap-4 grid-cols-2 grid-rows-1 justify-items-center my-5">
                 {#if googlePlayLink}
                     <a class="w-1/4" href={googlePlayLink} ><img class="" src="/google-1632434_960_720.png" alt="Google Play Logo" /></a>

@@ -1,8 +1,24 @@
 <script>
 
-    import PrimaryHeader from "./PrimaryHeader.svelte";
+    import PrimaryHeader from "./PrimaryHeading.svelte";
 
     const technologies = [
+        {
+            name: "Unity Engine",
+            image: "",
+        },
+        {
+            name: "JavaScript",
+            image: "",
+        },
+        {
+            name: "Svelte",
+            image: "",
+        },
+        {
+            name: "Tailwind CSS",
+            image: "",
+        },
         {
             name: "Unity Engine",
             image: "",
@@ -40,9 +56,9 @@
         Mauris auctor odio purus, non rhoncus odio pharetra nec.
     </p>
     <PrimaryHeader header="Technolgies"/>
-    <div class="flex justify-center">
+    <div class="flex flex-wrap justify-center">
         {#each technologies as technology, i (i)}
-            <img class="w-1/6" src={technology.image} alt={technology.name + " Logo"}/>
+            <img class="w-1/6 mx-5" src={technology.image} alt={technology.name + " Logo"}/>
         {/each}
     </div>
 </div>
