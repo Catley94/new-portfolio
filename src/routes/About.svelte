@@ -1,5 +1,26 @@
 <script>
 
+    import PrimaryHeader from "./PrimaryHeader.svelte";
+
+    const technologies = [
+        {
+            name: "Unity Engine",
+            image: "",
+        },
+        {
+            name: "JavaScript",
+            image: "",
+        },
+        {
+            name: "Svelte",
+            image: "",
+        },
+        {
+            name: "Tailwind CSS",
+            image: "",
+        },
+    ]
+
 </script>
 
 <style lang="postcss">
@@ -18,10 +39,10 @@
         Praesent rutrum placerat odio, vel mollis odio vulputate non. Nam facilisis et ante malesuada dignissim.
         Mauris auctor odio purus, non rhoncus odio pharetra nec.
     </p>
-    <h1 class="text-center my-5 text-xl">Technologies:</h1>
+    <PrimaryHeader header="Technolgies"/>
     <div class="flex justify-center">
-        <img class="w-1/6" src="/GitHub-logo.png" alt=""/>
-        <img class="w-1/6" src="/GitHub-logo.png" alt=""/>
-        <img class="w-1/6" src="/GitHub-logo.png" alt=""/>
+        {#each technologies as technology, i (i)}
+            <img class="w-1/6" src={technology.image} alt={technology.name + " Logo"}/>
+        {/each}
     </div>
 </div>

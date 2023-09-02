@@ -13,7 +13,7 @@
     }
 </style>
 
-<div class="project drop-shadow-lg m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
+<div class="project drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
     <div class="md:flex">
         <div class="md:shrink-0">
 <!--            <video></video>-->
