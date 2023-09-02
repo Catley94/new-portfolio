@@ -5,36 +5,20 @@
     const technologies = [
         {
             name: "Unity Engine",
-            image: "",
+            image: "/Logos/unity-engine.png",
         },
         {
             name: "JavaScript",
-            image: "",
+            image: "/Logos/js-logo.png",
         },
         {
             name: "Svelte",
-            image: "",
+            image: "/Logos/svelte-logo.png",
         },
         {
             name: "Tailwind CSS",
-            image: "",
-        },
-        {
-            name: "Unity Engine",
-            image: "",
-        },
-        {
-            name: "JavaScript",
-            image: "",
-        },
-        {
-            name: "Svelte",
-            image: "",
-        },
-        {
-            name: "Tailwind CSS",
-            image: "",
-        },
+            image: "/Logos/tailwindcss-logo.png",
+        }
     ]
 
 </script>
@@ -58,7 +42,7 @@
     <PrimaryHeader header="Technolgies"/>
     <div class="flex flex-wrap justify-center">
         {#each technologies as technology, i (i)}
-            <img class="w-1/6 mx-5" src={technology.image} alt={technology.name + " Logo"}/>
+            <img class="w-1/6 m-5" src={technology.image} alt={technology.name + " Logo"}/>
         {/each}
     </div>
 </div>
