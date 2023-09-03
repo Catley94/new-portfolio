@@ -38,7 +38,7 @@
                     <a class="w-1/2" href={githubLink} ><img class="" src="/GitHub-logo.png" alt="GitHub Logo" /></a>
                 {/if}
                 </div>
-            <p class="mt-2 text-slate-500">{description}</p>
+            <p class="mt-2 text-slate-500">{@html description}</p>
         </div>
     </div>
 </div>

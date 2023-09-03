@@ -4,34 +4,49 @@
 
     const projects = [
         {
-            name: "test",
-            catchLine: "This is a test line to check length",
+            name: "Affirmation Game",
+            catchLine: "Calming the mind.",
             description: `
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec varius lectus dui, eget laoreet felis ultrices quis.
-            In semper, turpis nec venenatis imperdiet, ipsum est auctor metus, nec pretium ipsum dui vel nunc.
-            Suspendisse cursus quis nibh sed rutrum. Vivamus quis ante ac turpis posuere ullamcorper in sed elit.
-            Sed ullamcorper dolor quis quam sollicitudin rutrum. Proin non tortor nisl. Vivamus commodo commodo consequat.
-            Integer id elit rutrum, tincidunt libero et, sollicitudin nisi. Proin dapibus diam nisi, a semper felis faucibus ac.`,
-            googlePlayLink: "dsds",
-            githubLink: "https://github.com/catley94",
-            image: "/building.jpg",
-            video: "/Videos/Chakra Idle.mp4"
+                <p class="italic">Game will be released on Google Play shortly, waiting for developer account to be verified.</p>
+                <br/>
+                This affirmation game will slow down your busy mind.
+                It will start with circles spawning faster and slowing down over time, alongside this,
+                there are affirmations showing at the top of the game,
+                these messages will be absorbed by your subconscious to start with, as the circles slow down,
+                your attention will be more focused on the affirmations.
+                Over time, the affirmations will instill positive thought behaviour, allowing you to be calmer,
+                plus think more clearly in many situations.
+            `,
+            googlePlayLink: "",
+            githubLink: "https://github.com/Catley94/UnitySource_AffirmationGame",
+            image: "",
+            video: "/Videos/Affirmation Game.mp4"
         },
         {
-            name: "test2",
-            catchLine: "TestLine2",
+            name: "Unity Portfolio",
+            catchLine: "Original Portfolio using as a showcase for my work.",
             description: `
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec varius lectus dui, eget laoreet felis ultrices quis.
-            In semper, turpis nec venenatis imperdiet, ipsum est auctor metus, nec pretium ipsum dui vel nunc.
-            Suspendisse cursus quis nibh sed rutrum. Vivamus quis ante ac turpis posuere ullamcorper in sed elit.
-            Sed ullamcorper dolor quis quam sollicitudin rutrum. Proin non tortor nisl. Vivamus commodo commodo consequat.
-            Integer id elit rutrum, tincidunt libero et, sollicitudin nisi. Proin dapibus diam nisi, a semper felis faucibus ac.`,
+                <p>This project was originally the portfolio that you're looking at.
+                I created it to showcase my work and also as a playground to test new ideas for future games.</p>
+                <br/>
+                <p>Standout features: Changes the weather by inputting nearest city to you, and gets a weather report,
+                then applies it within the game, supported weathers: Sunny, Rainy, Cloudy, Overcast and Thunderstorm.</p>
+                <br/>
+                <p>I talk to the API through a Unity / JS Bridge or API which is implemented within my own WebGL Template.
+                For development, I have implemented a WebSocket Server within the Unity Project itself,
+                this connects to a frontend project which talks to the API through JS, then sends messages over the websocket.</p>
+                <br/>
+                <p>This also has rolling credits at the end which reference all assets used.</p>
+                <br/>
+                <p>Future features I plan to add:
+                Replace the "Interact" stone, with a wolf you can talk to, using a Dialogue system, with several branches of conversation.</p>
+                <br/>
+                <p>This is a continuous project which I will update over time, it's always worth a look!</p>
+            `,
             googlePlayLink: "",
-            githubLink: "",
-            image: "verne-ho-0LAJfSNa-xQ-unsplash.jpg",
-            video: "/Videos/Ball Launcher.mp4"
+            githubLink: "https://github.com/Catley94/UnitySource_Portfolio",
+            image: "",
+            video: "/Videos/Unity Portfolio.mp4"
         }
     ]
 
