@@ -126,7 +126,7 @@
                 rather than fix the current one.</p>
             `,
             googlePlayLink: "",
-            githubLink: "",
+            githubLink: "https://github.com/Catley94/UnitySource_RiseOfTheBugs",
             image: "",
             video: "/Videos/Rise of the Bugs.mp4"
         },
