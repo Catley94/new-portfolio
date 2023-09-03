@@ -18,7 +18,7 @@
     <div class="md:flex">
         <div class="md:shrink-0">
             {#if video}
-            <video class="h-64 w-full object-cover md:h-full md:w-64" src={video} loop autoplay>
+            <video class="h-64 w-full object-cover md:h-full md:w-64" src={video} loop autoplay muted>
                 <track kind="captions" />
             </video>
             {:else}

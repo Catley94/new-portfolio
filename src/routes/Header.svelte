@@ -20,7 +20,7 @@
 <!--    <h1 class="uppercase text-center my-5 text-3xl font-bold">Samuel Catley</h1>-->
     <div
             class="relative overflow-hidden bg-cover bg-no-repeat text-center">
-        <video class="mx-auto" poster="/CompleteVideoPoster.png" src="/Videos/Complete_Compressed.mp4" loop autoplay>
+        <video class="mx-auto" poster="/CompleteVideoPoster.png" src="/Videos/Complete_Compressed.mp4" loop autoplay muted>
             <track kind="captions" />
         </video>
         <div
