@@ -32,14 +32,15 @@
                 <p>Standout features: Changes the weather by inputting nearest city to you, and gets a weather report,
                 then applies it within the game, supported weathers: Sunny, Rainy, Cloudy, Overcast and Thunderstorm.</p>
                 <br/>
-                <p>I talk to the API through a Unity / JS Bridge or API which is implemented within my own WebGL Template.
-                For development, I have implemented a WebSocket Server within the Unity Project itself,
+                <p>I talk to the API through a Unity / JS Bridge or API which is implemented within my own WebGL Template.</p>
+                <p>For development, I have implemented a WebSocket Server within the Unity Project itself,
                 this connects to a frontend project which talks to the API through JS, then sends messages over the websocket.</p>
                 <br/>
                 <p>This also has rolling credits at the end which reference all assets used.</p>
                 <br/>
-                <p>Future features I plan to add:
-                Replace the "Interact" stone, with a wolf you can talk to, using a Dialogue system, with several branches of conversation.</p>
+                <p>Future features I plan to add:</p>
+                <p>Replace the "Interact" stone, with a wolf you can talk to, using a Dialogue system, with several branches of conversation.</p>
+                <p>... and more.</p>
                 <br/>
                 <p>This is a continuous project which I will update over time, it's always worth a look!</p>
             `,
@@ -47,7 +48,28 @@
             githubLink: "https://github.com/Catley94/UnitySource_Portfolio",
             image: "",
             video: "/Videos/Unity Portfolio.mp4"
-        }
+        },
+        {
+            name: "Baby Visual Stimulation",
+            catchLine: "To provide visual stimulation to newborns and infants.",
+            description: `
+                <p>As a new father, I've found my child has needed more visual stimulation as they get older to prevent getting bored.</p>
+                <br/>
+                <p>Thus I bought myself a project and created a Unity Project which currently has two modes:
+                Black Particles and White Particles.</p>
+                <br/>
+                <p>Both have been successful, I now plan to add a few more modes,
+                such as a bouncing ball with high bounciness, and another which has more randomness involved.</p>
+                <br/>
+                <p>I also plan to make a menu system, so I can navigate between the different scenes easily.</p>
+                <br/>
+                <p>This is a continuous project which I will update over time, feel free to use!</p>
+            `,
+            googlePlayLink: "",
+            githubLink: "https://github.com/Catley94/UnitySource_BabyVisualStimulation",
+            image: "",
+            video: "/Videos/BabyVisualStimulation.mp4"
+        },
     ]
 
 </script>
