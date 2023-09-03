@@ -15,14 +15,14 @@
 </style>
 
 <div class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
-    <div class="md:flex">
+    <div class="">
         <div class="md:shrink-0">
             {#if video}
-            <video class="h-64 w-full object-cover md:h-full md:w-64" src={video} loop autoplay muted>
+            <video class="h-80 w-full object-cover" src={video} loop autoplay muted>
                 <track kind="captions" />
             </video>
             {:else}
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src={image} alt="Modern building architecture">
+                <img class="h-48 w-full object-cover" src={image} alt="Modern building architecture">
             {/if}
 
         </div>
