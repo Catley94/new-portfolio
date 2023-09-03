@@ -31,11 +31,11 @@
                 <p class="block mt-1 text-lg leading-tight font-medium">{catchLine}</p>
             <div class="grid gap-4 grid-cols-2 grid-rows-1 justify-items-center my-5">
                 {#if googlePlayLink}
-                    <a class="w-1/4" href={googlePlayLink} ><img class="" src="/google-1632434_960_720.png" alt="Google Play Logo" /></a>
+                    <a class="w-1/4" href={googlePlayLink} target="_blank" ><img class="" src="/google-1632434_960_720.png" alt="Google Play Logo" /></a>
 <!--                    <button class="rounded-full bg-slate-400">Google Play</button>-->
                 {/if}
                 {#if githubLink}
-                    <a class="w-1/2" href={githubLink} ><img class="" src="/GitHub-logo.png" alt="GitHub Logo" /></a>
+                    <a class="w-1/2" href={githubLink} target="_blank" ><img class="" src="/GitHub-logo.png" alt="GitHub Logo" /></a>
                 {/if}
                 </div>
             <p class="mt-2 text-slate-500">{@html description}</p>
