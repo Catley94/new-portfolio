@@ -59,7 +59,7 @@
             description: `
                 <p>As a new father, I've found my child has needed more visual stimulation as they get older to prevent getting bored.</p>
                 <br/>
-                <p>Thus I bought myself a project and created a Unity Project which currently has two modes:
+                <p>Thus I bought myself a projector and created a Unity Project which currently has two modes:
                 Black Particles and White Particles.</p>
                 <br/>
                 <p>Both have been successful, I now plan to add a few more modes,
