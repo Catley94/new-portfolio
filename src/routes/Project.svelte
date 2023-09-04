@@ -4,6 +4,7 @@
     export let description;
     export let googlePlayLink; //Replace with google play icon
     export let githubLink; //Replace with GitHub icon
+    export let demoLink;
     export let image;
     export let video;
 </script>
@@ -22,7 +23,7 @@
                 <track kind="captions" />
             </video>
             {:else}
-                <img class="h-48 w-full object-cover" src={image} alt="Modern building architecture">
+                <img class="h-48 w-full object-cover bg-slate-300" src={image} alt="Modern building architecture">
             {/if}
 
         </div>
@@ -36,6 +37,18 @@
                 {/if}
                 {#if githubLink}
                     <a class="w-1/2" href={githubLink} target="_blank" ><img class="" src="/GitHub-logo.png" alt="GitHub Logo" /></a>
+                {/if}
+                {#if demoLink}
+                    <div class="flex items-center justify-center">
+                        <a
+                                type="button"
+                                class="rounded border-2 border-blue-300 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-blue-300 transition duration-150 ease-in-out hover:border-blue-100 hover:bg-blue-200 hover:text-blue-300 focus:border-blue-100 focus:text-blue-100 focus:outline-none focus:ring-0 active:border-blue-200 active:text-blue-200"
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                                href={demoLink}
+                                target="_blank"
+                        >Demo</a>
+                    </div>
                 {/if}
                 </div>
             <p class="mt-2 text-slate-500">{@html description}</p>

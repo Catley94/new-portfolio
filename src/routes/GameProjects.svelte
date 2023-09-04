@@ -19,6 +19,7 @@
             `,
             googlePlayLink: "",
             githubLink: "https://github.com/Catley94/UnitySource_AffirmationGame",
+            demoLink: "",
             image: "",
             video: "/Videos/Affirmation Game.mp4"
         },
@@ -36,6 +37,8 @@
                 <p>For development, I have implemented a WebSocket Server within the Unity Project itself,
                 this connects to a frontend project which talks to the API through JS, then sends messages over the websocket.</p>
                 <br/>
+                <p>This game has a day / night cycle which responds to the current time.</p>
+                <br />
                 <p>This also has rolling credits at the end which reference all assets used.</p>
                 <br/>
                 <p>Future features I plan to add:</p>
@@ -46,6 +49,7 @@
             `,
             googlePlayLink: "",
             githubLink: "https://github.com/Catley94/UnitySource_Portfolio",
+            demoLink: "https://splendorous-scone-66aa6e.netlify.app/",
             image: "",
             video: "/Videos/Unity Portfolio.mp4"
         },
@@ -67,6 +71,7 @@
             `,
             googlePlayLink: "",
             githubLink: "https://github.com/Catley94/UnitySource_BabyVisualStimulation",
+            demoLink: "",
             image: "",
             video: "/Videos/BabyVisualStimulation.mp4"
         },
@@ -88,6 +93,7 @@
             `,
             googlePlayLink: "",
             githubLink: "https://github.com/Catley94/UnitySource_IdleEnergy",
+            demoLink: "",
             image: "",
             video: "/Videos/Chakra Idle.mp4"
         },
@@ -102,6 +108,7 @@
             `,
             googlePlayLink: "",
             githubLink: "",
+            demoLink: "",
             image: "",
             video: "/Videos/Ball Launcher.mp4"
         },
@@ -127,6 +134,7 @@
             `,
             googlePlayLink: "",
             githubLink: "https://github.com/Catley94/UnitySource_RiseOfTheBugs",
+            demoLink: "",
             image: "",
             video: "/Videos/Rise of the Bugs.mp4"
         },
