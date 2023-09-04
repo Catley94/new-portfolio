@@ -98,7 +98,7 @@
         <p>He is a great team member to have on any team.</p>
     </div>
     <br />
-    <p>For more reviews / recommendations, check out my <a class="text-blue-500 underline" href="https://www.linkedin.com/in/samuelcatley/" target="_blank">LinkedIn Profile</a> and scroll down to "Recommendations".</p>
+    <p class="font-semibold">For more reviews / recommendations, check out my <a class="text-blue-500 underline" href="https://www.linkedin.com/in/samuelcatley/" target="_blank">LinkedIn Profile</a> and scroll down to "Recommendations".</p>
     <PrimaryHeader header="Technolgies"/>
     <div class="flex flex-wrap justify-center">
         {#each technologies as technology, i (i)}
