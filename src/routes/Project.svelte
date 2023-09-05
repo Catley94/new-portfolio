@@ -7,6 +7,7 @@
     export let demoLink;
     export let image;
     export let video;
+    export let id;
 </script>
 
 <style lang="postcss">
@@ -15,7 +16,7 @@
     }
 </style>
 
-<div class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
+<div id={id} class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
     <div class="">
         <div class="md:shrink-0">
             {#if video}

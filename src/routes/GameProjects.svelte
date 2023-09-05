@@ -21,7 +21,8 @@
             githubLink: "https://github.com/Catley94/UnitySource_AffirmationGame",
             demoLink: "",
             image: "",
-            video: "/Videos/Affirmation Game.mp4"
+            video: "/Videos/Affirmation Game.mp4",
+            id: "affirmation_game"
         },
         {
             name: "Unity Portfolio",
@@ -51,7 +52,8 @@
             githubLink: "https://github.com/Catley94/UnitySource_Portfolio",
             demoLink: "https://splendorous-scone-66aa6e.netlify.app/",
             image: "",
-            video: "/Videos/Unity Portfolio.mp4"
+            video: "/Videos/Unity Portfolio.mp4",
+            id: "unity_portfolio"
         },
         {
             name: "Baby Visual Stimulation",
@@ -73,7 +75,8 @@
             githubLink: "https://github.com/Catley94/UnitySource_BabyVisualStimulation",
             demoLink: "",
             image: "",
-            video: "/Videos/BabyVisualStimulation.mp4"
+            video: "/Videos/BabyVisualStimulation.mp4",
+            id: "baby_visual_stimulation"
         },
         {
             name: "Chakra Idle",
@@ -95,7 +98,8 @@
             githubLink: "https://github.com/Catley94/UnitySource_IdleEnergy",
             demoLink: "",
             image: "",
-            video: "/Videos/Chakra Idle.mp4"
+            video: "/Videos/Chakra Idle.mp4",
+            id: "chakra_idle"
         },
         {
             name: "Ball Launcher",
@@ -110,7 +114,8 @@
             githubLink: "",
             demoLink: "",
             image: "",
-            video: "/Videos/Ball Launcher.mp4"
+            video: "/Videos/Ball Launcher.mp4",
+            id: "ball_launcher"
         },
         {
             name: "Rise of the Bugs",
@@ -136,7 +141,8 @@
             githubLink: "https://github.com/Catley94/UnitySource_RiseOfTheBugs",
             demoLink: "",
             image: "",
-            video: "/Videos/Rise of the Bugs.mp4"
+            video: "/Videos/Rise of the Bugs.mp4",
+            id: "rise_of_the_bugs"
         },
     ]
 
