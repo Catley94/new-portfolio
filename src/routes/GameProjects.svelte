@@ -17,7 +17,7 @@
                 Over time, the affirmations will instill positive thought behaviour, allowing you to be calmer,
                 plus think more clearly in many situations.
             `,
-            googlePlayLink: "",
+            googlePlayLink: "https://play.google.com/store/apps/details?id=com.DefaultCompany.Affirmation_Game",
             githubLink: "https://github.com/Catley94/UnitySource_AffirmationGame",
             demoLink: "",
             image: "",
