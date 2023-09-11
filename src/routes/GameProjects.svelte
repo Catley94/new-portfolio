@@ -7,7 +7,6 @@
             name: "Affirmation Game",
             catchLine: "Calming the mind.",
             description: `
-                <p class="italic">Game will be released on Google Play shortly, waiting for developer account to be verified.</p>
                 <br/>
                 This affirmation game will slow down your busy mind.
                 It will start with circles spawning faster and slowing down over time, alongside this,
