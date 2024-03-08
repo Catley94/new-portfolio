@@ -4,6 +4,24 @@
 
     const projects = [
         {
+            name: "Unreal Niagara Visual FX",
+            catchLine: "From simple forces to environment and ability VFX.",
+            description: `
+                <br/>
+                In this comprehensive course, I learned how to create a variety of Visual Effects (VFX) using Niagara in Unreal Engine 5. 
+                I started from the basics, understanding different Niagara emitters and renderers, and learned how to create game-ready VFX and develop master materials for VFX. 
+                I also learned how to bake out noise texture directly in Unreal. 
+                The course provided practical lessons on creating various environment effects like dandelion, rain, and waterfall, as well as attack effects like energy strike, lightning hit, and projectiles. 
+                I gained skills in creating custom modules for specific particle behaviors, using blueprints for VFX behavior, and crafting character disintegration using custom Niagara modules. 
+                This course was a perfect fit for me, as I was interested in creating VFX materials and meshes, and environment effects for my future game projects.
+            `,
+            githubLink: "https://github.com/Catley94/UnrealSource_VFX",
+            demoLink: "",
+            image: "",
+            video: "/Videos/VFX_Portfolio.mp4",
+            id: "vfx_course"
+        },
+        {
             name: "Affirmation Game",
             catchLine: "Calming the mind.",
             description: `

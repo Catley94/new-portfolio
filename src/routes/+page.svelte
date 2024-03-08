@@ -4,6 +4,7 @@
     import Contact from "./Contact.svelte";
     import GameProjects from "./GameProjects.svelte";
     import OtherProjects from "./OtherProjects.svelte";
+	import WorkProjects from "./WorkProjects.svelte";
 
 
 </script>
@@ -16,6 +17,7 @@
     <Header />
     <About />
     <GameProjects />
+    <WorkProjects />
     <OtherProjects />
     <Contact />
 </div>

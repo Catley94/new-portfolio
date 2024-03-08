@@ -4,6 +4,10 @@
 
     const technologies = [
         {
+            name: "Unreal Engine",
+            image: "/Logos/unreal-engine-icon.png",
+        },
+        {
             name: "Unity Engine",
             image: "/Logos/unity-engine.png",
         },
@@ -67,7 +71,7 @@
     <p>Hi, I'm Sam.</p>
     <br />
     <p>
-        I am a Unity Gameplay Developer with 3+ years experience,
+        I am a Game Developer with 4+ years experience,
         that's not including the countless evening hours I spend creating my own games and improving my knowledge.
     </p>
     <br />
@@ -98,6 +102,7 @@
         <p>He is a great team member to have on any team.</p>
     </div>
     <br />
+
     <p class="font-semibold">For more reviews / recommendations, check out my <a class="text-blue-500 underline" href="https://www.linkedin.com/in/samuelcatley/" target="_blank">LinkedIn Profile</a> and scroll down to "Recommendations".</p>
     <PrimaryHeader header="Technolgies"/>
     <div class="flex flex-wrap justify-center">
