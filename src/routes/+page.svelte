@@ -3,7 +3,7 @@
     import About from "./About.svelte";
     import Contact from "./Contact.svelte";
     import GameProjects from "./GameProjects.svelte";
-    import OtherProjects from "./OtherProjects.svelte";
+    import FullStackSoftwareProjects from "./FullStackSoftware.svelte";
 	import WorkProjects from "./WorkProjects.svelte";
 
 
@@ -16,8 +16,8 @@
 <div>
     <Header />
     <About />
+    <FullStackSoftwareProjects />
     <GameProjects />
     <WorkProjects />
-    <OtherProjects />
     <Contact />
 </div>

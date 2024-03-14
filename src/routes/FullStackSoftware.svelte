@@ -82,7 +82,7 @@
 
 </style>
 <div>
-    <PrimaryHeader header="Other Projects"/>
+    <PrimaryHeader header="FullStack / Software Projects"/>
     <div class="lg:grid gap-4 grid-cols-2 auto-rows-max justify-items-center">
         {#each projects as project, i (i)}
             <Project {...project} />

@@ -71,17 +71,17 @@
     <p>Hi, I'm Sam.</p>
     <br />
     <p>
-        I am a Game Developer with 4+ years experience,
-        that's not including the countless evening hours I spend creating my own games and improving my knowledge.
+        As a versatile Full Stack/Software Developer with over 4 years of experience, 
+        I am constantly working on improving my skills by dedicating countless evening hours to honing my craft. 
     </p>
     <br />
     <p>
-        A lot of my experience thus far has been through mobile casual and WebGL games,
-        however if that's not what you're looking for, don't let that put you off.
+        While my primary focus has been on mobile casual, WebGL games and similar, 
+        I am confident in my ability to adapt and create any type of application you desire across multiple platforms. 
     </p>
     <p>
-        I am an extremely quick learner and am confident I will be able to create any type of game you desire on multiple platforms.
-        I get most of my enjoyment out of prototyping, treading new ground, trying new technologies and debugging.
+        My passion lies in prototyping, exploring new technologies, debugging, 
+        and continuously expanding my knowledge in both Full Stack Development and Game Development.
     </p>
     <br />
     <PrimaryHeader header="Reviews"/>
