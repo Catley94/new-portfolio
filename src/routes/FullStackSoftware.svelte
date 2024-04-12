@@ -4,23 +4,103 @@
 
     const projects = [
         {
-            name: "Ask Sam",
-            catchLine: "Post an anonymous question and let it be answered by the wisdom of the universe.",
+            name: "Ask Sam API (Updated!)",
+            catchLine: "ASP.NET w/ MongoDB / SQL backend for the most anonymous question asking service there is.",
             description: `
-                <p>This app was actually a playground project to get familiar with Vue and a backend.</p>
-                <p>It has two frontend webapps, one is accessible to the public (for posting questions),
-                the other is only accessible to staff through a login page, here staff will answer all questions.</p>
+                <p class="font-semibold">This project is part 1 / 3 of the whole Ask Sam Project.</p>
+                <br />
+                <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
+                    I used this as a way to learn ASP.NET and get familiar with React again.</p>
+                <br />
+                <p>At this current time, this project has 8 API endpoints, following CRUD design.</p>
+                <p>It's purpose is to accomodate both the public and private frontends,
+                    by getting all questions, questions specific to a user guid, and also a specific question of a specific user.</p>
+                <p>It also has an extracted database layer, so new DBs can be easily supported by creating a new class speific to the language and commands of that DB.</p>
+                <br />
+                <p>For more technical details, I encourage you to check out the GitHub Repo.</p>
+                <br />
+                <p class="font-semibold">What is the Ask Sam Project?</p>
+                <p>It has one backend and two frontend webapps, one is accessible to the public (for posting questions),
+                    the other is only accessible to staff through a login page, here staff will answer all questions.</p>
                 <br />
                 <p>Once you have submitted a question, you may come back to this page at any time to check if it has been answered,
-                if it has, it will show the answer.</p>
+                    if it has, it will show the answer.</p>
                 <br />
                 <p>The user may ask as many questions as they like.</p>
                 <br />
-                <p>This project uses Vue, NodeJS, Express, Express Router, MongoDB, Mongoose, Cookie Parser and Axios.</p>
+                <p class="font-semibold">The new tech stack for the whole project is: C#, ASP.NET, MongoDB / SQL (interchangable), React and TailwindCSS.</p>
+                <p>The old techstack for this project was: Vue, NodeJS, Express, Express Router, MongoDB, Mongoose, Cookie Parser and Axios.</p>
             `,
             googlePlayLink: "",
-            githubLink: "https://github.com/Catley94/askSamBE",
-            image: "/AskSam.png",
+            demoLink: "https://asksamapi.azurewebsites.net/",
+            githubLink: "https://github.com/Catley94/AskSam_API",
+            image: "/AskSamAPI.png",
+            video: ""
+        },
+        {
+            name: "Ask Sam - Public (Updated!)",
+            catchLine: "React and TailwindCSS for the most anonymous question asking service there is.",
+            description: `
+                <p class="font-semibold">This project is part 2 / 3 of the whole Ask Sam Project.</p>
+                <br />
+                <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
+                    I used this as a way to learn ASP.NET and get familiar with React again.</p>
+                <br />
+                <p>This frontend allows users to post anonymous questions, which will be answered on Ask Sam - Private.</p>
+                <p>It also requires cookies to be accepted in order for the app to work correctly, 
+                    and like with all apps that use cookies, the user will get a choice to accept or decline cookies, 
+                    if declined, it will prevent any cookie from being created, and delete any that may have been created before by this website.</p>
+
+                <p>For more technical details, I encourage you to check out the GitHub Repo.</p>
+                <br />
+                <p class="font-semibold">What is the Ask Sam Project?</p>
+                <p>It has one backend and two frontend webapps, one is accessible to the public (for posting questions),
+                    the other is only accessible to staff through a login page, here staff will answer all questions.</p>
+                <br />
+                <p>Once you have submitted a question, you may come back to this page at any time to check if it has been answered,
+                    if it has, it will show the answer.</p>
+                <br />
+                <p>The user may ask as many questions as they like.</p>
+                <br />
+                <p class="font-semibold">The new tech stack for the whole project is: C#, ASP.NET, MongoDB / SQL (interchangable), React and TailwindCSS.</p>
+                <p>The old techstack for this project was: Vue, NodeJS, Express, Express Router, MongoDB, Mongoose, Cookie Parser and Axios.</p>
+            `,
+            googlePlayLink: "",
+            demoLink: "https://delightful-smoke-058adbc10.5.azurestaticapps.net/",
+            githubLink: "https://github.com/Catley94/AskSam_Client",
+            image: "/AskSamPublic.png",
+            video: ""
+        },
+        {
+            name: "Ask Sam - Private (Updated!)",
+            catchLine: "React, React Router, Supabase(Auth) and TailwindCSS for the most anonymous question asking service there is.",
+            description: `
+                <p class="font-semibold">This project is part 3 / 3 of the whole Ask Sam Project.</p>
+                <br />
+                <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
+                    I used this as a way to learn ASP.NET and get familiar with React again.</p>
+                <br />
+                <p>This frontend allows select users to answer anonymous questions, which are asked through Ask Sam - Public.</p>
+                <p>It has both a sign up and sign in page, also with full support of anonymous logins for ease of use for the app and showcasing.</p>
+
+                <p>For more technical details, I encourage you to check out the GitHub Repo.</p>
+                <br />
+                <p class="font-semibold">What is the Ask Sam Project?</p>
+                <p>It has one backend and two frontend webapps, one is accessible to the public (for posting questions),
+                    the other is only accessible to staff through a login page, here staff will answer all questions.</p>
+                <br />
+                <p>Once you have submitted a question, you may come back to this page at any time to check if it has been answered,
+                    if it has, it will show the answer.</p>
+                <br />
+                <p>The user may ask as many questions as they like.</p>
+                <br />
+                <p class="font-semibold">The new tech stack for the whole project is: C#, ASP.NET, MongoDB / SQL (interchangable), React and TailwindCSS.</p>
+                <p>The old techstack for this project was: Vue, NodeJS, Express, Express Router, MongoDB, Mongoose, Cookie Parser and Axios.</p>
+            `,
+            googlePlayLink: "",
+            demoLink: "https://jolly-stone-06db79410.5.azurestaticapps.net/",
+            githubLink: "https://github.com/Catley94/AskSam_Staff",
+            image: "/AskSamPrivate.png",
             video: ""
         },
         {
