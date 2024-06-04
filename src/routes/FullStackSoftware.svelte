@@ -9,6 +9,8 @@
             description: `
                 <p class="font-semibold">This project is part 1 / 3 of the whole Ask Sam Project.</p>
                 <br />
+                <p class="font-semibold">Note: This is hosted by a free Azure service, it will go offline after a period of inactivity, if this happens, please open the site, and wait 5 minutes before trying again.</p>
+                <br />
                 <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
                     I used this as a way to learn ASP.NET and get familiar with React again.</p>
                 <br />
@@ -43,6 +45,8 @@
             description: `
                 <p class="font-semibold">This project is part 2 / 3 of the whole Ask Sam Project.</p>
                 <br />
+                <p class="font-semibold">Note: This is hosted by a free Azure service, it will go offline after a period of inactivity, if this happens, please open the site, and wait 5 minutes before trying again.</p>
+                <br />
                 <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
                     I used this as a way to learn ASP.NET and get familiar with React again.</p>
                 <br />
@@ -76,6 +80,10 @@
             catchLine: "React, React Router, Supabase(Auth) and TailwindCSS for the most anonymous question asking service there is.",
             description: `
                 <p class="font-semibold">This project is part 3 / 3 of the whole Ask Sam Project.</p>
+                <br />
+                <p class="font-semibold">Note: This is hosted by a free Azure service, it will go offline after a period of inactivity, if this happens, please open the site, and wait 5 minutes before trying again.</p>
+            
+                <p class="font-semibold">Note: This also uses Supabase for Authentication which needs to be manually started, please contact me s.catley@live.co.uk to start this service if you get an error signing in.</p>
                 <br />
                 <p>This app started as a playground project to get familiar with Vue and a backend, however since it has been updated, 
                     I used this as a way to learn ASP.NET and get familiar with React again.</p>
