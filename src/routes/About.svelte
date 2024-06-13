@@ -1,68 +1,25 @@
 <script>
 
     import PrimaryHeader from "./PrimaryHeading.svelte";
+    import Technology from "../Models/Technology.js";
 
     const technologies = [
-        {
-            name: "Unreal Engine",
-            image: "/Logos/unreal-engine-icon.png",
-        },
-        {
-            name: "Unity Engine",
-            image: "/Logos/unity-engine.png",
-        },
-        {
-            name: "C#",
-            image: "/Logos/csharp-logo.png",
-        },
-        {
-            name: "C++",
-            image: "/Logos/CPP.png",
-        },
-        {
-            name: "NodeJS",
-            image: "/Logos/node-logo.png",
-        },
-        {
-            name: "HTML",
-            image: "/Logos/html-logo.png",
-        },
-        {
-            name: "CSS",
-            image: "/Logos/css-logo.png",
-        },
-        {
-            name: "JavaScript",
-            image: "/Logos/js-logo.png",
-        },
-        {
-            name: "Typescript",
-            image: "/Logos/typescript-logo.png",
-        },
-        {
-            name: "Svelte",
-            image: "/Logos/svelte-logo.png",
-        },
-        {
-            name: "React",
-            image: "/Logos/react-logo.png",
-        },
-        {
-            name: "Vue",
-            image: "/Logos/vue-logo.png",
-        },
-        {
-            name: "Tailwind CSS",
-            image: "/Logos/tailwindcss-logo.png",
-        },
-        {
-            name: "Ionic",
-            image: "/Logos/ionic-logo.png",
-        },
-        {
-            name: "P5.js",
-            image: "/Logos/p5-logo.png",
-        }
+        new Technology("Unreal Engine", "/Logos/unreal-engine-icon.png"),
+        new Technology("Unity Engine", "/Logos/unity-engine.png"),
+        new Technology("C++", "/Logos/CPP.png"),
+        new Technology("C#", "/Logos/csharp-logo.png"),
+        new Technology(".NET", "/Logos/dotnet.png"),
+        new Technology("NodeJS", "/Logos/node-logo.png"),
+        new Technology("HTML", "/Logos/html-logo.png"),
+        new Technology("CSS", "/Logos/css-logo.png"),
+        new Technology("JavaScript", "/Logos/js-logo.png"),
+        new Technology("Typescript", "/Logos/typescript-logo.png"),
+        new Technology("Svelte", "/Logos/svelte-logo.png"),
+        new Technology("React", "/Logos/react-logo.png"),
+        new Technology("Vue", "/Logos/vue-logo.png"),
+        new Technology("Tailwind CSS", "/Logos/tailwindcss-logo.png"),
+        new Technology("Ionic", "/Logos/ionic-logo.png"),
+        new Technology("P5.js", "/Logos/p5-logo.png"),
     ]
 
 </script>
