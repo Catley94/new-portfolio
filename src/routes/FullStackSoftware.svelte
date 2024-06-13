@@ -4,6 +4,34 @@
 
     const projects = [
         {
+            name: "Seek.co.nz Web Scraper - C#",
+            catchLine: "To get a summary on what type of roles are popular over in New Zealand",
+            description: `
+                <p>This project was created to save time by manually filling out a spreadsheet for roles that are popular over in New Zealand.</p>
+                <br />
+                <br />
+                <p>Later on in life, I would like to move to New Zealand as it's such a beautiful country with friendly people.</p>
+                <p>However my skills need to be favourable to them, thus I needed a way to see the up to date roles in NZ using a popular job website.</p>
+                <p>Initially I started documentating manually using an Excel Spreadsheet, however I soon realised that took me days, whereas
+                    I could create a web scraper to do this programatically in a matter of moments.</p>
+                <br />
+                <br />
+                <p>This program scrapes the website's query page for a role keyword and location, then loops through all the pages and roles listed,
+                    visits each of them, loops through all the \"<li>\" tags and searches the innerText for keywords defined in the project.</p>
+                <p>Keywords such as: C#, C++, TypeScript, JavaScript, React, Vue, SQL and many more.</p>
+                <br />
+                <br />
+                <p>Because I did not what this to be a malicious web scraper that increases traffic on the website, 
+                    it saves the data in a .json file, thus if you run the program more than once in the day, 
+                    the first time it will scrape, save and display, the second time it will just load up the .json data and display the data.</p>
+            `,
+            googlePlayLink: "",
+            demoLink: "",
+            githubLink: "https://github.com/Catley94/CSharp_WebScraper",
+            image: "/SeekWebScraper.png",
+            video: ""
+        },
+        {
             name: "Ask Sam API (Updated!)",
             catchLine: "ASP.NET w/ MongoDB / SQL backend for the most anonymous question asking service there is.",
             description: `
