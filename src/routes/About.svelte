@@ -16,6 +16,10 @@
             image: "/Logos/csharp-logo.png",
         },
         {
+            name: "C++",
+            image: "/Logos/CPP.png",
+        },
+        {
             name: "NodeJS",
             image: "/Logos/node-logo.png",
         },
