@@ -4,6 +4,7 @@
     import Technology from "../Models/Technology.js";
 
     const technologies = [
+        new Technology("Blender", "/Logos/blender-icon.png"),
         new Technology("Unreal Engine", "/Logos/unreal-engine-icon.png"),
         new Technology("Unity Engine", "/Logos/unity-engine.png"),
         new Technology("C++", "/Logos/CPP.png"),

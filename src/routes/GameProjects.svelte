@@ -4,6 +4,33 @@
 
     const projects = [
         {
+            name: "Blender Animations",
+            catchLine: "Animating characters in Blender",
+            description: `
+                <br/>
+                Whilst taking on a course created by GameDev.tv, I have created several animations including:
+                a snake attack,
+                running human,
+                a bean which can look left to right, walk forward and gets shocked (at a monkey which creeps up on it!).
+                This course has taught me a lot, including, but not limited to:
+                creating a rig manually through individually creating new bones,
+                bendy bones,
+                attaching a rig to the mesh,
+                weight painting,
+                using rigify plugin which gives you a set of premade rigs for various different types (humans, animals etc.)
+                working with the dope sheet and graph editor for animation,
+                creating different actions and able to create many animations attached to one asset,
+                and more.
+                This skill will be useful for the future where I can create my own asset packs,
+                 and offer them to others to increase creativity and variety in the games we create and play today.
+            `,
+            githubLink: "https://github.com/Catley94/Blender_Animations_Course",
+            demoLink: "",
+            image: "",
+            video: "/Videos/Blender_Animation_Course.mp4",
+            id: "blender_animations"
+        },
+        {
             name: "Unreal Niagara Visual FX",
             catchLine: "From simple forces to environment and ability VFX.",
             description: `
