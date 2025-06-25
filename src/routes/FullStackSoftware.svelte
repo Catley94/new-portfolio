@@ -4,6 +4,54 @@
 
     const projects = [
         {
+            name: "Wallpaper Changer",
+            catchLine: "Simple app which allows you to change your wallpaper by searching for a topic using the wallhaven.cc source API.",
+            description: `
+                <p>Built with Rust and Flutter.</p>
+                <br />
+                <p>A simple wallpaper changer using wallhaven.cc as it's source.</p>
+                <br />
+                <p>Supports both Linux and Windows and has release builds for both.</p>
+                <br />
+                <p>Search with a topic in mind, press search and watch the images populate, see one you like?
+                Click it and it will automatically change your background.</p>
+                <br />
+                <p>Self cleans, when the thumbnail folder reaches 500MB, it will auto clear.</p>
+                <br />
+                <p>Please have a look at the GitHub Page for more information containing pictures and instructions.</p>
+            `,
+            googlePlayLink: "",
+            demoLink: "",
+            githubLink: "https://github.com/Catley94/wallpaper_changer",
+            image: "/wallpaper-changer.png",
+            video: ""
+        },
+        {
+            name: "Create Desktop File",
+            catchLine: "A simple tool to create a .desktop file for any application in Linux.",
+            description: `
+                <p>Built with Rust.</p>
+                <br />
+                <p>Quite simply, will create a .desktop file given the information by the user either locally or globally.</p>
+                <p>The name of the .desktop file is populated by the Name given by the user.</p>
+                <br />
+                <p>Information for the .desktop file supported is below:</p>
+                <p>Name, Comment, Exec, Icon, Terminal, Type, Categories</p>
+                <br />
+                <p>Provides different ways to create a .desktop file, GUI, CLI Flags and CLI In-line and has an
+                Informative Help screen and two alias (create-desktop-file and cdf)</p>
+                <br />
+                <p>You can install it from a script with the source code or release build.</p>
+                <br />
+                <p>Please have a look at the GitHub Page for more information containing pictures and instructions.</p>
+            `,
+            googlePlayLink: "",
+            demoLink: "",
+            githubLink: "https://github.com/Catley94/RustSource_CreateDesktopFile/",
+            image: "/create-desktop-file.png",
+            video: ""
+        },
+        {
             name: "Seek.co.nz Web Scraper - C#",
             catchLine: "To get a summary on what type of roles are popular over in New Zealand",
             description: `
