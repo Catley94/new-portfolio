@@ -16,8 +16,8 @@
 <div>
     <Header />
     <About />
-    <GameProjects />
     <FullStackSoftwareProjects />
+    <GameProjects />
     <WorkProjects />
     <Contact />
 </div>
