@@ -2,57 +2,62 @@
     export let name;
     export let catchLine;
     export let description;
-    export let googlePlayLink; //Replace with google play icon
-    export let githubLink; //Replace with GitHub icon
+    export let googlePlayLink;
+    export let githubLink;
     export let demoLink;
     export let image;
     export let video;
     export let id;
 </script>
 
-<style lang="postcss">
-    .project {
-
-    }
-</style>
-
-<div id={id} class="project bg-slate-100 drop-shadow-lg hover:drop-shadow-2xl m-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl text-center">
-    <div class="">
-        <div class="md:shrink-0">
-            {#if video}
-            <video class="h-80 w-full object-cover" src={video} loop autoplay muted>
+<div
+    id={id}
+    class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300 hover:border-indigo-500 hover:-translate-y-1 flex flex-col"
+    style="box-shadow: 0 0 0 0 transparent; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;"
+    onmouseenter="this.style.boxShadow='0 0 30px -5px rgba(99,102,241,0.3)'"
+    onmouseleave="this.style.boxShadow='0 0 0 0 transparent'"
+>
+    <!-- Media -->
+    <div class="shrink-0">
+        {#if video}
+            <video class="h-52 w-full object-cover" src={video} loop autoplay muted>
                 <track kind="captions" />
             </video>
-            {:else}
-                <img class="h-48 w-full object-cover bg-slate-300" src={image} alt="Modern building architecture">
-            {/if}
+        {:else}
+            <img class="h-52 w-full object-cover bg-gray-800" src={image} alt={name} />
+        {/if}
+    </div>
 
-        </div>
-        <div class="p-8">
-            <div class="uppercase tracking-wide text-xl text-blue-500 font-semibold">{name}</div>
-                <p class="block mt-1 text-lg leading-tight font-medium">{catchLine}</p>
-            <div class="grid gap-4 grid-cols-2 grid-rows-1 justify-items-center my-5">
+    <!-- Content -->
+    <div class="p-6 flex flex-col flex-1">
+        <div class="uppercase tracking-wide text-sm text-indigo-400 font-semibold mb-1">{name}</div>
+        <p class="text-gray-200 font-medium mb-4 leading-snug">{catchLine}</p>
+
+        <!-- Links -->
+        {#if googlePlayLink || githubLink || demoLink}
+            <div class="flex flex-wrap items-center gap-3 mb-4">
                 {#if googlePlayLink}
-                    <a class="w-1/4" href={googlePlayLink} target="_blank" ><img class="" src="/google-1632434_960_720.png" alt="Google Play Logo" /></a>
-<!--                    <button class="rounded-full bg-slate-400">Google Play</button>-->
+                    <a href={googlePlayLink} target="_blank" class="opacity-80 hover:opacity-100 transition-opacity">
+                        <img class="h-7 w-auto" src="/google-1632434_960_720.png" alt="Google Play" />
+                    </a>
                 {/if}
                 {#if githubLink}
-                    <a class="w-1/2" href={githubLink} target="_blank" ><img class="" src="/GitHub-logo.png" alt="GitHub Logo" /></a>
+                    <a href={githubLink} target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
+                        <img class="h-6 w-auto brightness-200" src="/GitHub-logo.png" alt="GitHub" />
+                    </a>
                 {/if}
                 {#if demoLink}
-                    <div class="flex items-center justify-center">
-                        <a
-                                type="button"
-                                class="rounded border-2 border-blue-300 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-blue-300 transition duration-150 ease-in-out hover:border-blue-100 hover:bg-blue-200 hover:text-blue-300 focus:border-blue-100 focus:text-blue-100 focus:outline-none focus:ring-0 active:border-blue-200 active:text-blue-200"
-                                data-te-ripple-init
-                                data-te-ripple-color="light"
-                                href={demoLink}
-                                target="_blank"
-                        >Demo</a>
-                    </div>
+                    <a
+                        href={demoLink}
+                        target="_blank"
+                        class="border border-indigo-500 text-indigo-400 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 px-4 py-1.5 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-200"
+                    >
+                        Live Demo
+                    </a>
                 {/if}
-                </div>
-            <p class="mt-2 text-slate-500">{@html description}</p>
-        </div>
+            </div>
+        {/if}
+
+        <p class="text-gray-500 text-sm leading-relaxed mt-auto">{@html description}</p>
     </div>
 </div>

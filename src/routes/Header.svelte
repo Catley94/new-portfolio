@@ -1,5 +1,4 @@
 <script>
-
     function scrollIntoView({ target }) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
@@ -7,41 +6,40 @@
             behavior: 'smooth'
         });
     }
-
 </script>
 
-<style lang="postcss">
+<div class="relative w-full h-screen overflow-hidden">
+    <video
+        class="absolute inset-0 w-full h-full object-cover"
+        poster="/CompleteVideoPoster.png"
+        src="/Videos/Complete_Compressed.mp4"
+        loop autoplay muted
+    >
+        <track kind="captions" />
+    </video>
 
-</style>
+    <!-- Dark gradient overlay -->
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(3,7,18,0.75) 0%, rgba(3,7,18,0.5) 50%, rgba(3,7,18,0.85) 100%);"></div>
 
-<div class="w-auto">
-<!--    <video></video>-->
-<!--    <img src="/verne-ho-0LAJfSNa-xQ-unsplash.jpg" alt="TODO: FILL ME IN" />-->
-<!--    <h1 class="uppercase text-center my-5 text-3xl font-bold">Samuel Catley</h1>-->
-    <div
-            class="relative overflow-hidden bg-cover bg-no-repeat text-center">
-        <video class="mx-auto" poster="/CompleteVideoPoster.png" src="/Videos/Complete_Compressed.mp4" loop autoplay muted>
-            <track kind="captions" />
-        </video>
-        <div
-                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-                style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="flex h-full items-center justify-center">
-                <div class="text-slate-300">
-                    <h2 class="mb-4 text-4xl font-semibold uppercase">Samuel Catley</h2>
-                    <h4 class="mb-6 text-xl font-semibold">Game Developer and 3D / Technical Artist with FullStack / Software development experience</h4>
-                    <a
-                            type="button"
-                            class="rounded border-2 border-slate-300 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-slate-300 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                            data-te-ripple-init
-                            data-te-ripple-color="light"
-                            href="#contact"
-                            on:click|preventDefault={scrollIntoView}
-                            >
-                        Contact
-                    </a>
-                </div>
-            </div>
-        </div>
+    <!-- Centered content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+        <p class="text-indigo-400 text-sm font-semibold tracking-[0.25em] uppercase mb-4">Portfolio</p>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white mb-6 leading-none">
+            Samuel Catley
+        </h1>
+        <p class="text-base md:text-lg text-gray-300 font-light max-w-2xl leading-relaxed mb-10">
+            Game Developer &amp; 3D / Technical Artist<br class="hidden md:block" />
+            with Full Stack &amp; Software Development experience
+        </p>
+        <a
+            href="#contact"
+            on:click|preventDefault={scrollIntoView}
+            class="inline-block border border-indigo-500 text-indigo-400 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 px-8 py-3 rounded text-sm font-semibold uppercase tracking-widest transition-all duration-200"
+        >
+            Get in Touch
+        </a>
     </div>
+
+    <!-- Bottom fade into page bg -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none" style="background: linear-gradient(to bottom, transparent, #030712);"></div>
 </div>

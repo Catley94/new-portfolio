@@ -196,9 +196,9 @@
 
 </style>
 
-<div>
+<div class="max-w-6xl mx-auto px-6 md:px-16 pb-16">
     <PrimaryHeader header="Game Projects"/>
-    <div class="lg:grid gap-4 grid-cols-2 auto-rows-max justify-items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {#each projects as project, i (i)}
             <Project {...project} />
         {/each}
