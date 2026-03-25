@@ -196,7 +196,7 @@
 
 </style>
 
-<div class="max-w-6xl mx-auto px-6 md:px-16 pb-16">
+<div class="max-w-5xl mx-auto px-8 md:px-16 pb-20">
     <PrimaryHeader header="Game Projects"/>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {#each projects as project, i (i)}

@@ -24,14 +24,14 @@
     ]
 </script>
 
-<section class="max-w-6xl mx-auto px-6 md:px-16 py-20">
-    <div class="md:grid md:grid-cols-2 md:gap-20">
+<section class="max-w-5xl mx-auto px-8 md:px-16 py-24">
+    <div class="md:grid md:grid-cols-2 md:gap-24">
 
         <!-- Left: Bio + Review -->
         <div>
-            <p class="text-sm font-semibold tracking-[0.2em] uppercase text-teal-600 mb-3">About</p>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Hi, I'm Sam.</h2>
-            <div class="space-y-4 text-gray-700 leading-relaxed">
+            <p class="text-xs font-medium tracking-[0.3em] uppercase text-zen-accent mb-4">About</p>
+            <h2 class="text-3xl font-light text-zen-heading mb-8 leading-snug">Hi, I'm Sam.</h2>
+            <div class="space-y-5 text-zen-body font-light leading-loose">
                 <p>
                     As a versatile Full Stack/Software Developer with over 4 years of experience,
                     I am constantly working on improving my skills by dedicating countless evening hours to honing my craft.
@@ -47,37 +47,37 @@
             </div>
 
             <!-- Review -->
-            <div class="mt-10">
-                <p class="text-sm font-semibold tracking-[0.2em] uppercase text-teal-600 mb-4">Colleague Review</p>
-                <blockquote class="border-l-4 border-teal-500 pl-6">
-                    <div class="space-y-3 text-gray-600 italic text-sm leading-relaxed">
+            <div class="mt-14">
+                <p class="text-xs font-medium tracking-[0.3em] uppercase text-zen-accent mb-6">A Colleague's Words</p>
+                <blockquote class="border-l-2 border-zen-accent pl-6">
+                    <div class="space-y-4 text-zen-muted font-light italic text-sm leading-loose">
                         <p>Sam brings new experience and solutions for intricate tasks to the table and explains them in a clear and concise manner for peer review. He takes on feedback and improves his solution accordingly.</p>
-                        <p>He has also taken existing coding principles and implementations and made them his own — a great example of this is the Queue system within an existing in house framework. This hated coding approach has single handedly turned into a well loved feature of the framework.</p>
-                        <p>He is always open minded about solutions and new concepts and challenges old code bases to see if he can improve them, and has shown time and time again that this is not just talk — he can back it up with clean and elegant code solutions.</p>
-                        <p class="font-semibold not-italic text-gray-800">He is a great team member to have on any team.</p>
+                        <p>He has also taken existing coding principles and made them his own — the Queue system within our framework is a great example. This once-dreaded approach became a well-loved feature.</p>
+                        <p>He is always open minded, challenges old code bases to find improvements, and backs up what he says with clean, elegant code solutions.</p>
+                        <p class="font-normal not-italic text-zen-body">He is a great team member to have on any team.</p>
                     </div>
-                    <cite class="block mt-4 text-xs text-gray-400 not-italic">— Anonymous Colleague</cite>
+                    <cite class="block mt-5 text-xs text-zen-subtle not-italic tracking-wide">— Anonymous Colleague</cite>
                 </blockquote>
-                <p class="mt-6 text-sm text-gray-500">
-                    More recommendations on my
-                    <a class="text-teal-600 hover:text-teal-700 underline underline-offset-2 transition-colors" href="https://www.linkedin.com/in/samuelcatley/" target="_blank">LinkedIn Profile</a>.
+                <p class="mt-8 text-sm text-zen-muted font-light">
+                    More recommendations on
+                    <a class="text-zen-accent hover:text-zen-accent-deep underline underline-offset-4 decoration-zen-border hover:decoration-zen-accent transition-all duration-500" href="https://www.linkedin.com/in/samuelcatley/" target="_blank">LinkedIn</a>.
                 </p>
             </div>
         </div>
 
         <!-- Right: Tech stack -->
-        <div class="mt-16 md:mt-0">
-            <p class="text-sm font-semibold tracking-[0.2em] uppercase text-teal-600 mb-3">Technologies</p>
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">What I work with</h2>
+        <div class="mt-20 md:mt-0">
+            <p class="text-xs font-medium tracking-[0.3em] uppercase text-zen-accent mb-4">Technologies</p>
+            <h2 class="text-3xl font-light text-zen-heading mb-8 leading-snug">What I work with</h2>
             <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
                 {#each technologies as technology, i (i)}
-                    <div class="bg-white border border-gray-200 rounded-xl p-3 flex flex-col items-center gap-2 hover:border-teal-400 transition-colors duration-200 group shadow-sm">
+                    <div class="bg-zen-card border border-zen-border rounded-2xl p-3 flex flex-col items-center gap-2 hover:border-zen-accent transition-colors duration-500 group">
                         <img
-                            class="w-10 h-10 object-contain"
+                            class="w-9 h-9 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                             src={technology.image}
                             alt={technology.name + " Logo"}
                         />
-                        <span class="text-xs text-gray-400 group-hover:text-gray-700 transition-colors text-center leading-tight">{technology.name}</span>
+                        <span class="text-xs text-zen-subtle group-hover:text-zen-muted transition-colors duration-500 text-center leading-tight">{technology.name}</span>
                     </div>
                 {/each}
             </div>

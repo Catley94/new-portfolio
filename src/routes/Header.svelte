@@ -2,9 +2,7 @@
     function scrollIntoView({ target }) {
         const el = document.querySelector(target.getAttribute('href'));
         if (!el) return;
-        el.scrollIntoView({
-            behavior: 'smooth'
-        });
+        el.scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
@@ -18,28 +16,28 @@
         <track kind="captions" />
     </video>
 
-    <!-- Overlay -->
-    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.75) 100%);"></div>
+    <!-- Warm, calm overlay -->
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(20,30,20,0.6) 0%, rgba(20,30,20,0.35) 50%, rgba(20,30,20,0.7) 100%);"></div>
 
-    <!-- Centered content -->
+    <!-- Content -->
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <p class="text-teal-400 text-sm font-semibold tracking-[0.25em] uppercase mb-4">Portfolio</p>
-        <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white mb-6 leading-none">
+        <p class="text-zen-accent text-xs font-medium tracking-[0.35em] uppercase mb-6 opacity-90">Portfolio</p>
+        <h1 class="text-4xl md:text-6xl font-light tracking-wide text-white mb-5 leading-tight">
             Samuel Catley
         </h1>
-        <p class="text-base md:text-lg text-gray-200 font-light max-w-2xl leading-relaxed mb-10">
-            Game Developer &amp; 3D / Technical Artist<br class="hidden md:block" />
-            with Full Stack &amp; Software Development experience
+        <div class="w-12 h-px bg-zen-accent mb-5 opacity-70"></div>
+        <p class="text-sm md:text-base text-white/70 font-light max-w-xl leading-loose mb-10 tracking-wide">
+            Game Developer &amp; 3D Artist &nbsp;·&nbsp; Full Stack Developer
         </p>
         <a
             href="#contact"
             on:click|preventDefault={scrollIntoView}
-            class="inline-block border border-teal-400 text-teal-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 px-8 py-3 rounded text-sm font-semibold uppercase tracking-widest transition-all duration-200"
+            class="inline-block border border-white/40 text-white/80 hover:border-zen-accent hover:text-zen-accent px-8 py-3 rounded-full text-xs font-medium uppercase tracking-[0.2em] transition-all duration-500"
         >
             Get in Touch
         </a>
     </div>
 
-    <!-- Bottom fade into page bg -->
-    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none" style="background: linear-gradient(to bottom, transparent, #f7f7f2);"></div>
+    <!-- Fade into page background -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style="background: linear-gradient(to bottom, transparent, #f4f4ef);"></div>
 </div>
